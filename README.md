@@ -33,13 +33,14 @@ https://acceptsuitenodejsui.herokuapp.com/index_all.html
 Below are the sample URLs of web api methods
 
 * AcceptJSRequestUrl : URL to invoke Accept JS web service on payment.
-![Image of AcceptJSRequestUrl](Github-Images/AcceptjsRequestUrl.JPG)
+![Image of AcceptJSRequestUrl](Github-Images/AcceptJSRequestUrl.JPG)
 * AcceptHostedRequestUrl : URL to get the token value for Accept Hosted.
-![Image of HostedRequestUrl](Github-Images/Hostedrequesturl.JPG)
+![Image of HostedRequestUrl](Github-Images/AcceptHostedRequestUrl.JPG)
 * AcceptCustomerRequestUrl : URL to get the token value for Accept Customer.
-![Image of CustomerRequestUrl](Github-Images/CustomerRequesturl.JPG)
+![Image of CustomerRequestUrl](Github-Images/AcceptCustomerRequestUrl.JPG)
 * ValidateCustomerRequestUrl : URL to invoke a web api method to validated customer ID.
-![Image of ValidateCustomerUrl](Github-Images/ValidCustomerrequest.JPG
+![Image of ValidateCustomerUrl](Github-Images/ValidateCustomerRequestUrl.JPG)
+
 
 The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
 
