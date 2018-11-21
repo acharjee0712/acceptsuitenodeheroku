@@ -5,7 +5,7 @@ var url = require('url');
 const https = require("https");
 fs = require("fs");
 var http = require('http');
-var cors = require('cors');
+
 
 
 var ApiContracts = require('./sdk-node-master/lib/apicontracts')
@@ -19,19 +19,7 @@ var sslOptions = {
   cert: fs.readFileSync('cert.pem'),
   passphrase: '0712'
 };
-// app.use(cors())
-// app.use(function(req, res, next) {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   if(req.method === 'OPTIONS'){
-//     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-//     return res.status(200).json({});
-//   }
-  
-//   res.header('Access-Control-Allow-Headers', "Origin,X-Requested-With,Content-Type,Accept,Authorization");
-//   //res.setHeader('Access-Control-Allow-Credentials', true);
-//   // next();
-// });
-  
+
   app.use(function (req, res, next) {
 
     res.header("Access-Control-Allow-Origin", "*");
