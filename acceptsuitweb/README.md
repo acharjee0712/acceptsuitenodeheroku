@@ -19,6 +19,13 @@ Developer Guide to deploy the Node.js using Express.js Web API Application
 
 •Open the command prompt in administrator mode.
 
+ •Run npm config set proxy http://userproxy.visa.com
+      npm config set https-proxy http://userproxy.visa.com
+
+• Run npm install
+
+• Run npm install express
+
 
 •Set proxy using the below command(Provide your username and password)
  set HTTP_PROXY=http://USERNAME:PASSWORD@internet.visa.com:80
