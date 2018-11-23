@@ -15,14 +15,18 @@
  
 	<style type="text/css">
 	body{
-		 /*font-family:  Century Gothic,Regular!important;*/
-		 font-family: "Helvetica Neue",Helvetica,Arial,sans-serif!important;
-		 /*background: url('images/AdobeStock_191284997.jpeg'); */
-		 background: url('images/background_cloth.jpg') no-repeat;
-		 padding-top: 50px;
-		 background-size: 100% 100%;
-		 background-attachment: fixed;
-		 font-size: 14px;
+		                                /*font-family:  Century Gothic,Regular!important;*/
+                                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif!important;
+                                /*background: url('images/AdobeStock_191284997.jpeg'); */
+                                background: url('images/background_cloth.jpg') no-repeat;
+                                padding-top: 50px;
+                                font-size: 14px;
+                                background-size: 100% 100%;
+                     background-attachment: fixed;
+                     height: 100vh !important;
+                     width: 100% !important;
+                     overflow: hidden;
+
 	}
 		.navbar {min-height: 0px; margin-bottom: 0px; border: 0px;height: 50px;}
 		.nav>li {display: inline-block;}
@@ -31,16 +35,25 @@
 		.navbar-centered .nav > li > a:hover{ background-color: white; color: steelblue;font-weight: 600 !important;}
 		.navbar-centered .nav > li > a::after{ display: block;font-weight: bold;height: 0;overflow:hidden;visibility: hidden;content: attr(title);}
 		.navbar-centered .nav .active > a,.navbar-centered .navbar-nav > .active > a:focus { background-color: white; color: black; font-weight:bold; }
-		.navbar-centered .navbar-nav { float: none; text-align: center; }
+		.navbar-centered .navbar-nav { float: none; text-align:center; }
 	    .navbar-centered .navbar-nav > li { float: none; }
 	    .navbar-centered .nav > li { display: inline; }
 	    .navbar-centered .nav > li > a {display: inline-block; }
 	    #home { color:ivory; margin-left: 15%; margin-right: 15%;}
-		@media (min-width: 768px) {
-	    	.navbar-centered .nav > li > a { width:15%; }
-	    	#home { font-size: 30px}
+		<!-- @media (min-width: 768px) { -->
+	    	<!-- .navbar-centered .nav > li > a { width:15%; } -->
+	    	<!-- #home { font-size: 30px} -->
 
-	    }
+	    <!-- } -->
+		@media (min-width: 768px) {
+                                .navbar-centered .nav > li > a {/* width:15%; */}
+                                #home { font-size: 30px}
+                                .navbar {
+                                                height: auto !important;
+                                }
+
+                }
+
 	    @media (min-width:360px ) and (max-width: 768px){
 	    	.navbar-centered .nav > li > a {font-size: 12px}
 	    	#home { font-size: 20px;margin-top: 226px !important;}
@@ -58,22 +71,58 @@
 		.navbar{
 			border-radius: 2px;
 		}
+		
+		@media (max-width: 768px){
+                                .navbar {
+                                                height: auto !important;
+                                }
+                                .navbar-centered {
+                                                padding-left: 22px !important; 
+                                }
+                                .productTypes>li {
+                                                padding-right: 0;
+                                }
+                                .btnsListJS {
+                                                padding-right: 0 !important; 
+                                }
+                                .btnsList {
+                                                padding-right: 0 !important; 
+                                }
+                                #home {
+                                                font-size: 20px;
+                                                margin-top: 0 !important; 
+                                                margin-top: 78px !important;
+                                                /* height: 48%; */
+                                                position: absolute;
+                                                display: table;
+                                }
+
+                                .homeText {
+                                                font-size: 18px !important;
+                                                color: #555;
+                                                font-weight: 600;
+                                                display: table-cell;
+                                                vertical-align: middle;
+                                }
+                                
+                }
+
 
 		.navbar-centered{
-			padding-left: 90px !important;
+			padding-left: 90px ;
 		}
 	.productTypes>li
 	{
-    padding-right: 35px;
+    /*padding-right: 35px;*/
 	}
 	.productTypes>li:last-child
 	{
-    padding-right: 0px;
+   /* padding-right: 0px; */
 	}
      .productTypes>li>a
 	{
 		font-weight: bold;
-    font-size: 16px;
+   
     border: 2px solid white;
     border-radius: 5px;
     padding: 15px 0 15px 0;
@@ -216,37 +265,88 @@ text-align: center;font-weight: 600;
  
 
 .headerBtnCustomer{
-    width: 176px !important;
-    font-size: 18px !important;
+   width: 176px ;
+    font-size: 18px ;
     height: 48px;
 }
 
 .headerBtnJs{
-    width: 120px !important;
-    font-size: 18px !important;
+   width: 120px ;
+    font-size: 18px ;
     height: 48px;
 }
 
 .headerBtnJsUI{
-    width: 135px !important;
-    font-size: 18px !important;
+  width: 135px ;
+    font-size: 18px ;
     height: 48px;
 }
 
 .headerBtnHosted{
-    width: 155px !important;
-    font-size: 18px !important;
+    width: 135px ;
+    font-size: 18px ;
     height: 48px;
 }
 
 .btnsList{
-	padding-right: 8% !important;
+	padding-right: 8% ;
 }
 
 .btnsListJS{
-	padding-right: 7.3% !important;
+	padding-right: 7.3%;
 }
 
+@media (max-width: 768px) {
+.btnsList{
+	padding-right: 0 !important;
+}
+.productTypes>li
+	{
+    padding-right: 10px !important;
+	}
+.btnsListJS{
+width:20% !important;
+	padding-right: 0 !important;
+	  font-size: 13px !important;
+}
+.btnsListUI{
+width:22% !important;
+	padding-right: 0 !important;
+	  font-size: 13px !important;
+}
+.btnsListHS{
+width:25% !important;
+	padding-right:0 !important;
+	  font-size: 13px !important;
+}
+.btnsListCS{
+width:27% !important;
+	padding-right: 0 !important;
+	  font-size: 13px !important;
+}
+.headerBtnCustomer{
+   width: unset !important;
+   
+}
+
+.headerBtnJs{
+   width: unset !important;
+  
+}
+
+.headerBtnJsUI{
+  width: unset !important;
+   
+}
+
+.headerBtnHosted{
+    width: unset !important;
+  
+}
+.navbar-centered{
+			padding-left: 30px !important;
+		}
+}
 	</style>
 	<script src="scripts/jquery-2.1.4.min.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
@@ -261,11 +361,11 @@ text-align: center;font-weight: 600;
 	<div class="container-fluid containerDiv">
 		<div class="navbar navbar-inverse" role="navigation">
 			<div class="container-fluid navbar-centered">
-				<ul class="nav navbar-nav productTypes" style="margin-top: 0px; margin-bottom:0px; margin-left:auto;padding-top: 1px;">
+				<ul class="nav navbar-nav productTypes" style="margin-top: 0px; margin-bottom:0px;padding-top: 1px;padding-bottom: 1px;">
 					<li class="btnsListJS"><a class="headerBtnJs"  href="index.html?producttype=acceptjs" title="Accept.js">Accept.js</a></li>
-					<li class="btnsList"><a class="headerBtnJsUI" href="index.html?producttype=acceptui" title="Accept.js UI">Accept.js UI</a></li>
-					<li class="btnsList"><a class="headerBtnHosted" href="index.html?producttype=accepthosted" title="Accept Hosted">Accept Hosted</a></li>
-					<li class="btnsList"><a class="headerBtnCustomer" href="index.html?producttype=acceptcustomer" title="Accept Customer">Accept Customer</a></li>
+					<li class="btnsList btnsListUI"><a class="headerBtnJsUI" href="index.html?producttype=acceptui" title="Accept.js UI">Accept.js UI</a></li>
+					<li class="btnsList btnsListHS"><a class="headerBtnHosted" href="index.html?producttype=accepthosted" title="Accept Hosted">Accept Hosted</a></li>
+					<li class="btnsList btnsListCS"><a class="headerBtnCustomer" href="index.html?producttype=acceptcustomer" title="Accept Customer">Accept Customer</a></li>
 				</ul>
 		    </div>
 	    </div>
