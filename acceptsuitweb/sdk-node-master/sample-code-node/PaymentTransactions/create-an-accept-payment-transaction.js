@@ -7,15 +7,15 @@ var utils = require('../utils.js');
 
 
 
-function createAnAcceptPaymentTransaction(apiloginid,transactionkey,token,callback) {
+function createAnAcceptPaymentTransaction(apiloginid, transactionkey, token, callback) {
 	var merchantAuthenticationType = new ApiContracts.MerchantAuthenticationType();
 	merchantAuthenticationType.setName(apiloginid);
 	merchantAuthenticationType.setTransactionKey(transactionkey);
-	
+
 
 	var opaqueData = new ApiContracts.OpaqueDataType();
 	opaqueData.setDataDescriptor('COMMON.ACCEPT.INAPP.PAYMENT');
-	
+
 	opaqueData.setDataValue(token)
 	var paymentType = new ApiContracts.PaymentType();
 	paymentType.setOpaqueData(opaqueData);
@@ -128,25 +128,23 @@ function createAnAcceptPaymentTransaction(apiloginid,transactionkey,token,callba
 	createRequest.setMerchantAuthentication(merchantAuthenticationType);
 	createRequest.setTransactionRequest(transactionRequestType);
 
-	//pretty print request
 	console.log(JSON.stringify(createRequest.getJSON(), null, 2));
-		
-	var ctrl = new ApiControllers.CreateTransactionController(createRequest.getJSON());
-	//Defaults to sandbox
-	//ctrl.setEnvironment(SDKConstants.endpoint.production);
 
-	ctrl.execute(function(){
+	var ctrl = new ApiControllers.CreateTransactionController(createRequest.getJSON());
+
+
+	ctrl.execute(function () {
 
 		var apiResponse = ctrl.getResponse();
 
 		var response = new ApiContracts.CreateTransactionResponse(apiResponse);
 
-		//pretty print response
+
 		console.log(JSON.stringify(response, null, 2));
 
-		if(response != null){
-			if(response.getMessages().getResultCode() == ApiContracts.MessageTypeEnum.OK){
-				if(response.getTransactionResponse().getMessages() != null){
+		if (response != null) {
+			if (response.getMessages().getResultCode() == ApiContracts.MessageTypeEnum.OK) {
+				if (response.getTransactionResponse().getMessages() != null) {
 					console.log('Successfully created transaction with Transaction ID: ' + response.getTransactionResponse().getTransId());
 					console.log('Response Code: ' + response.getTransactionResponse().getResponseCode());
 					console.log('Message Code: ' + response.getTransactionResponse().getMessages().getMessage()[0].getCode());
@@ -154,7 +152,7 @@ function createAnAcceptPaymentTransaction(apiloginid,transactionkey,token,callba
 				}
 				else {
 					console.log('Failed Transaction');
-					if(response.getTransactionResponse().getErrors() != null){
+					if (response.getTransactionResponse().getErrors() != null) {
 						console.log('Error Code: ' + response.getTransactionResponse().getErrors().getError()[0].getErrorCode());
 						console.log('Error message: ' + response.getTransactionResponse().getErrors().getError()[0].getErrorText());
 					}
@@ -162,8 +160,8 @@ function createAnAcceptPaymentTransaction(apiloginid,transactionkey,token,callba
 			}
 			else {
 				console.log('Failed Transaction. ');
-				if(response.getTransactionResponse() != null && response.getTransactionResponse().getErrors() != null){
-				
+				if (response.getTransactionResponse() != null && response.getTransactionResponse().getErrors() != null) {
+
 					console.log('Error Code: ' + response.getTransactionResponse().getErrors().getError()[0].getErrorCode());
 					console.log('Error message: ' + response.getTransactionResponse().getErrors().getError()[0].getErrorText());
 				}
@@ -182,7 +180,7 @@ function createAnAcceptPaymentTransaction(apiloginid,transactionkey,token,callba
 }
 
 if (require.main === module) {
-	createAnAcceptPaymentTransaction(function(){
+	createAnAcceptPaymentTransaction(function () {
 		console.log('createAnAcceptPaymentTransaction call complete.');
 	});
 }
