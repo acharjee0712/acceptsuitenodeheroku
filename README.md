@@ -163,6 +163,7 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 • Downlaod and install Heroku CLI using the link
      https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 • Open the command prompt & set the below proxy:-
+
      set HTTP_PROXY=http://USERNAME:PASSWORD@internet.visa.com:80
 	 
      set HTTPS_PROXY=http://USERNAME:PASSWORD@internet.visa.com:443
