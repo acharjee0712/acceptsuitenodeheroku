@@ -124,3 +124,78 @@ Ex:-
 Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
 ![Image of dashboard](Github-Images/dashboard.PNG)
+
+## Step by Step Guide for Automatic Deployment
+
+## Prerequisite:
+
+• Download node.js from https://nodejs.org/en/download/
+• Heroku account (New account can be created using the link https://signup.heroku.com/)     
+• Downlaod and install Heroku CLI using the link
+     https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+• Open the command prompt & set the below proxy:-
+     set HTTP_PROXY=http://USERNAME:PASSWORD@internet.visa.com:80
+      set HTTPS_PROXY=http://USERNAME:PASSWORD@internet.visa.com:443
+	 
+# Steps to run the bat file after downloading the code
+
+* Click on Clone or Download button from the repository.
+
+* Popup Displays 2 Options Open in Desktop or Download ZIP
+
+![Image of CloneorDownloadButton](Github-Images/githunlink.JPG)
+
+* Click on Download ZIP and choose the folder C:\GitHUb_node to save.
+![Image of DownloadToGitHubFolder](Github-Images/zipfile.JPG)
+
+* UnZip the folder accept-sample-app-node-master
+
+* Once UnZipped , accept-sample-app-node-master Folder contains css, js , HTML files along with few folders.
+
+![Image of FolderStructure](Github-Images/batfile.JPG)
+* ** Before running bat file its mandatory to follow all the prerequisite steps.**
+
+* Double click on auto_note bat file, in order to run the Bat file.
+
+#Steps to follow while running the Bat File
+
+• It will open Two command prompt , go to the 2nd one & press any key.
+
+![Image of 2nd command prompt](Github-Images/herokulogin.JPG)
+
+• Heroku login page will open on browser.
+
+![Image of Heroku login page](Github-Images/herokuloginpage.JPG)
+
+• Click on log in, enter the credentials, it will show logged in after succefull loged in.
+
+![Image of Succefull Heroku login page](Github-Images/loggedin.JPG)
+
+• Go to the 1st command prompt & press any key to continue
+
+![Image of 1st Command Prompt](Github-Images/1stcmd.JPG)
+
+• It will open another new window to create the folder,close the new command prompt & back to the previous one
+![Image of New Command Prompt](Github-Images/herokucreate.JPG)
+
+•press any key to continue, it will open another command prompt , close that & move back to previous one.
+
+![Image of New Command Prompt](Github-Images/cmdone.JPG)
+
+• After  successfully deployment, it  will host the Accept Suite Application.
+
+•Once batch file successfully execute it will automatically launch the Accept Suite 
+  URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html in Chrome Browser.
+
+![Image of dashboard](Github-Images/dashboard.PNG)
+
+
+
+
+
+
+
+
+	 
+	  
+	  
