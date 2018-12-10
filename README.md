@@ -36,16 +36,16 @@ These instructions is for running the Accept Suite UI on your local machine for 
 
 * Popup Displays 2 Options Open in Desktop or Download ZIP
 
-![Image of CloneorDownloadButton](Github-Images/(Github-Images/githunlink.JPG)
+![Image of CloneorDownloadButton](documents/images/githunlink.JPG)
 
 *Click on Download ZIP and choose the folder C:\GitHUb_node to save.
-![Image of DownloadToGitHubFolder](Github-Images/zipfile.JPG)
+![Image of DownloadToGitHubFolder](documents/images/zipfile.JPG)
 
 * UnZip the folder accept-sample-app-node-master
 
 * Once UnZipped , accept-sample-app-node-master Folder contains css, js , HTML files along with few folders.
 
-![Image of FolderStructure](Github-Images/batfile.JPG)
+![Image of FolderStructure](documents/images/batfile.JPG)
  
 
 * Open the folder **Accept-Suit-Web**
@@ -60,7 +60,7 @@ These instructions is for running the Accept Suite UI on your local machine for 
 
 •Run the command "heroku login" and provide the login credentials for heroku.
 
-•Go inside the application & then go to the folder Acceptsuitewebapipath where acceptsuite.js  file exists and  then copy the path , paste it to command prompt & 
+•Go inside the application & then go to the folder AcceptSuiteWebApi path where acceptsuite.js  file exists and  then copy the path , paste it to command prompt & 
 run the command "git init" (before running the command, delete the git folder in the root path if exists)
 
 •Run the command "heroku create ". Eg:- heroku create webnodeapi
@@ -95,22 +95,22 @@ detailed description is explained below.
 
 * AcceptJSRequestUrl/AcceptUI.JS RequestUrl : URL to invoke Accept JS web service.
 
-	**Sample URL: https://webnodeapi.herokuapp.com/myapp/acceptsuite/AcceptJs**
+	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/AcceptJs**
 
 
 * AcceptHostedRequestUrl : URL to get the token value for Accept Hosted.
 
-	**Sample URL: https://webnodeapi.herokuapp.com/myapp/acceptsuite/AcceptHosted**
+	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/AcceptHosted**
 
 
 * AcceptCustomerRequestUrl : URL to get the token value for Accept Customer.
 
-	**Sample URL: https://webnodeapi.herokuapp.com/myapp/acceptsuite/AcceptCustomer**
+	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/AcceptCustomer**
 
 
 * ValidateCustomerRequestUrl : URL to invoke a web api method to validate customer ID.
 
-	**Sample URL: https://webnodeapi.herokuapp.com/myapp/acceptsuite/validateCustomer**
+	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/validateCustomer**
  
  
 ## Merchant Authentication Details:
@@ -121,15 +121,15 @@ The following are the parameters with values that remains constant throughout th
 
 * ClientKey
 
-![Image of ClientKey](Github-Images/clientKey.PNG)
+![Image of ClientKey](documents/images/clientKey.PNG)
 
 * ApiLoginID
 
-![Image of ApiLoginID](Github-Images/apiLogin.PNG)
+![Image of ApiLoginID](documents/images/apiLogin.PNG)
 
 * ApiTransactionKey
 
-![Image of ApiTransactionKey](Github-Images/apiTransactionKey.PNG)
+![Image of ApiTransactionKey](documents/images/apiTransactionKey.PNG)
 
 ### Create Website on Heroku
 
@@ -152,7 +152,7 @@ The following are the parameters with values that remains constant throughout th
 
 Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
-![Image of dashboard](Github-Images/dashboard.PNG)
+![Image of dashboard](documents/images/dashboard.PNG)
 
 ## Step by Step Guide for Automatic Deployment
 
@@ -174,51 +174,45 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
 * Popup Displays 2 Options Open in Desktop or Download ZIP
 
-![Image of CloneorDownloadButton](Github-Images/githunlink.JPG)
+![Image of CloneorDownloadButton](documents/images/githunlink.JPG)
 
 * Click on Download ZIP and choose the folder C:\GitHUb_node to save.
-![Image of DownloadToGitHubFolder](Github-Images/zipfile.JPG)
+![Image of DownloadToGitHubFolder](documents/images/zipfile.JPG)
 
 * UnZip the folder accept-sample-app-node-master
 
 * Once UnZipped , accept-sample-app-node-master Folder contains css, js , HTML files along with few folders.
 
-![Image of FolderStructure](Github-Images/batfile.JPG)
+![Image of FolderStructure](documents/images/batfile.JPG)
 * ** Before running bat file its mandatory to follow all the prerequisite steps.**
 
 * Double click on auto_note bat file, in order to run the Bat file.
 
 #Steps to follow while running the Bat File
 
-• It will open Two command prompt , go to the 2nd one & press any key.
-
-![Image of 2nd command prompt](Github-Images/herokulogin.JPG)
-
+• It will open the command prompt 
 • Heroku login page will open on browser.
 
-![Image of Heroku login page](Github-Images/herokuloginpage.JPG)
+![Image of Heroku login page](documents/images/herokuloginpage.JPG)
 
 • Click on log in, enter the credentials, it will show logged in after succefull loged in.
 
-![Image of Succefull Heroku login page](Github-Images/loggedin.JPG)
-
-• Go to the 1st command prompt & press any key to continue
-
-![Image of 1st Command Prompt](Github-Images/1stcmd.JPG)
-
-• It will open another new window to create the folder,close the new command prompt & back to the previous one
-![Image of New Command Prompt](Github-Images/herokucreate.JPG)
-
-•press any key to continue, it will open another command prompt , close that & move back to previous one.
-
-![Image of New Command Prompt](Github-Images/cmdone.JPG)
+![Image of Succefull Heroku login page](documents/images/loggedin.JPG)
 
 • After  successfully deployment, it  will host the Accept Suite Application.
 
 •Once batch file successfully execute it will automatically launch the Accept Suite 
   URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html in Chrome Browser.
 
-![Image of dashboard](Github-Images/dashboard.PNG)
+![Image of dashboard](documents/images/dashboard.PNG)
+
+##Trouble Shoot
+
+• While deploying the app, if encounter with  could not resolve host/could not read from remote repository issue  , please follow the steps describe below 
+![Images of  could not resolve host](documents/images/deploy_issue.JPG)
+• Download the certificate file i.e:- cacert.pem file.
+• copy the path of cacert.pem file , & paste it as variable values with variable name as SSL_CERT-FILE in your system environment variables
+
 
 
 
