@@ -48,7 +48,7 @@ These instructions is for running the Accept Suite UI on your local machine for 
 ![Image of FolderStructure](documents/images/batfile.JPG)
  
 
-* Open the folder **Accept-Suit-Web**
+* Open the folder **Acceptsuitewebapi**
 
 ### Steps to deploy the application in Heroku
 
@@ -168,7 +168,7 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 	 
      set HTTPS_PROXY=http://USERNAME:PASSWORD@internet.visa.com:443
 	 
-# Steps to run the bat file after downloading the code
+# Steps to run the shell script  file after downloading the code
 
 * Click on Clone or Download button from the repository.
 
@@ -183,14 +183,13 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
 * Once UnZipped , accept-sample-app-node-master Folder contains css, js , HTML files along with few folders.
 
-![Image of FolderStructure](documents/images/batfile.JPG)
-* ** Before running bat file its mandatory to follow all the prerequisite steps.**
+![Image of FolderStructure](documents/images/shellscript.JPG)
+* ** Before running the shell script  file its mandatory to follow all the prerequisite steps.**
 
-* Double click on auto_note bat file, in order to run the Bat file.
+* Double click on  deploy , in order to run the  shell script.
 
-#Steps to follow while running the Bat File
-
-• It will open the command prompt 
+#Steps to follow while running the  shell script
+• It will open the git bash window
 • Heroku login page will open on browser.
 
 ![Image of Heroku login page](documents/images/herokuloginpage.JPG)
