@@ -48,7 +48,7 @@ These instructions is for running the Accept Suite UI on your local machine for 
 
 * Once UnZipped , accept-sample-app-node-master Folder contains css, js , HTML files along with few folders.
 
-![Image of FolderStructure](documents/images/batfile.JPG)
+![Image of FolderStructure](documents/images/folder_structure.JPG)
  
 
 * Open the folder **Acceptsuitewebapi**
@@ -58,6 +58,7 @@ These instructions is for running the Accept Suite UI on your local machine for 
 •Open the command prompt in administrator mode
 
 •Set proxy using the below command(Provide your username and password)
+   
    set HTTP_PROXY=http://USERNAME:PASSWORD@internet.visa.com:80
    
    set HTTPS_PROXY=http://USERNAME:PASSWORD@internet.visa.com:443
@@ -70,7 +71,8 @@ run the command "git init" (before running the command, delete the git folder in
 •Run the command "heroku create ". Eg:- heroku create webnodeapi
 
 •Check the remote URL using the command “git remote -v”. it should be the created app's git URL,
- Eg:-   heroku  https://git.heroku.com/webnodeapi.git (fetch)
+ Eg:-   
+        heroku  https://git.heroku.com/webnodeapi.git (fetch)
  
         heroku  https://git.heroku.com/webnodeapi.git (push)
 
@@ -144,7 +146,9 @@ The following are the parameters with values that remains constant throughout th
 • Run the command "heroku create ". Eg:- heroku create acceptsuitenodejsui
 
 •Check the remote URL using the command “git remote -v”. it should be the created app's git URL,
- Eg:- heroku  https://git.heroku.com/acceptsuitenodejsui.git (fetch)
+ Eg:- 
+      heroku  https://git.heroku.com/acceptsuitenodejsui.git (fetch)
+	  
       heroku  https://git.heroku.com/acceptsuitenodejsui.git (push)
 	  
 • Run “git status” command, it will provide the details of file not pushed to heroku git.
@@ -179,6 +183,7 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 ![Images of  could not resolve host](documents/images/deploy_issue.JPG)
 
 • Download the certificate file i.e:- cacert.pem file.
+
 • copy the path of cacert.pem file , & paste it as variable values with variable name as SSL_CERT-FILE in your system environment variables
 
 
