@@ -63,7 +63,7 @@ Eg:- https://webnodeapi.herokuapp.com/acceptsuite/AcceptJs?apiLoginId=VALUE&apiT
 4>AcceptCustomer - apiLoginId, apiTransactionKey, iframeCommunicatorUrl, customerId
 
 ## OPen SSL certificate
-*  If certificate expries , please add the no of days in place of xxx, & run the below command from command prompt  in order to renew the certificate
+*  If certificate expries , please add the no of days in place of xxx, & run the below command from command prompt  in order to renew the certificate<br/>
      openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days XXX
 
 

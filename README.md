@@ -57,8 +57,8 @@ These instructions is for running the Accept Suite UI on your local machine for 
 
 •Open the command prompt in administrator mode
 
-•Set proxy using the below command(Provide your username and password)
-     **set HTTP_PROXY=http://USERNAME:PASSWORD@internet.visa.com:80**
+•Set proxy using the below command(Provide your username and password)<br/>
+     **set HTTP_PROXY=http://USERNAME:PASSWORD@internet.visa.com:80**<br/>
      **set HTTPS_PROXY=http://USERNAME:PASSWORD@internet.visa.com:443**
 
 •Run the command "heroku login" and provide the login credentials for heroku.
@@ -68,9 +68,9 @@ run the command "git init" (before running the command, delete the git folder in
 
 •Run the command "heroku create ". Eg:- heroku create webnodeapi
 
-•Check the remote URL using the command “git remote -v”. it should be the created app's git URL,
+•Check the remote URL using the command “git remote -v”. it should be the created app's git URL,<br/>
  Eg:-   
-        **heroku  https://git.heroku.com/webnodeapi.git (fetch)**
+        **heroku  https://git.heroku.com/webnodeapi.git (fetch)**<br/>
         **heroku  https://git.heroku.com/webnodeapi.git (push)**
 
 •Run “git status” command, it will provide the details of file not pushed to heroku git.
@@ -142,9 +142,9 @@ The following are the parameters with values that remains constant throughout th
 
 • Run the command "heroku create ". Eg:- heroku create acceptsuitenodejsui
 
-•Check the remote URL using the command “git remote -v”. it should be the created app's git URL,
+•Check the remote URL using the command “git remote -v”. it should be the created app's git URL,<br/>
  Eg:- 
-      **heroku  https://git.heroku.com/acceptsuitenodejsui.git (fetch)**
+      **heroku  https://git.heroku.com/acceptsuitenodejsui.git (fetch)**<br/>
 	  **heroku  https://git.heroku.com/acceptsuitenodejsui.git (push)**
 	  
 • Run “git status” command, it will provide the details of file not pushed to heroku git.
