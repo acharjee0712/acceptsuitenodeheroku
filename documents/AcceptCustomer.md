@@ -17,10 +17,12 @@ https://localhost:PortNumber/index.html?ProductType=AcceptCustomer&CustomerId=18
 
 ## Workflow
 
-Accept Customer will utilize existing ANET Customer Profiles API methods.Customer profile ID is mandatory to access Accept Customer product type. 
+**Accept Hosted client-side functionality is written in *accept-customer.js* javascript file (C:\GitHub\accept-sample-app-dotnet-master\scripts\js\accept-suite\accept-customer.js).**
 
-When the user clicks on the Accept Customer Tab in the dashboard, he/she will be asked to provide the customer profile ID.
-By default, a customer ID is already populated in the input field.
+Accept Customer will utilize existing ANET Customer Profiles API methods. Customer ID is mandatory to access Accept Customer product type. 
+
+When the user clicks on the Accept Customer Tab in the dashboard, a pop up will be displayed asking to provide the customer profile ID.
+A default customer ID is already populated in the input field.
 
 ![Image of CustomerPopUp](images/CustomerPopUp.PNG)
 
@@ -28,26 +30,150 @@ There is an information icon beside the input field, on click of it the scenario
 
 ![Image of Scenarios](images/Scenarios.PNG)
 
-After providing the customer ID and click on Continue button, background script will be executed.
+After providing the customer ID and click on Continue button, background script will be executed which calls the **Redirect** function.
 
-First the customer ID will be validated. An Ajax call is made by passing the provided customer ID to the web API to the URL ValidateCustomerRequestUrl in constants file for validating the ID.  
+```
+//On click of continue button in accept customer pop up in dashboard page
+function Redirect() {
+    var customerId = '',
+        result = '';
+    document.getElementById('invalidCustomer').style.display = 'none';
+    customerId = document.getElementById('txtCustomerId').value;
+    if (customerId === '') {
+        document.getElementById('txtCustomerId').focus();
+        document.getElementById('invalidCustomer').style.display = 'inherit';
+        document.getElementById('invalidCustomer').innerHTML = 'Please enter Customer ID';
+    } else {
+        //Validation of customer id will be done by using the below function
+        result = validateCustomer(customerId);
 
-![Image of ValidateCustomer](images/ValidateCustomer.PNG)
+        if (result.valid) {//if it is a valid customer id
+            if (result.status) {
+                window.location.href = 'index.html?producttype=acceptcustomer&customerid=' + customerId;
+                //if Customer id is already validated
+                sessionStorage.setItem('isValidated', 'true');
+            } else {
+                document.getElementById('invalidCustomer').style.display = 'inherit';
+                document.getElementById('invalidCustomer').innerHTML = result.message;
+            }
+        } else {
+            document.getElementById('invalidCustomer').style.display = 'inherit';
+            document.getElementById('invalidCustomer').innerHTML = result.message;
+        }
+    }
+}
+```
 
-On loading the page by directly providing the query strings in URL also, it first validates the customer ID parameter in the URL. If it is valid
-then only the page is loaded.
+In this functiopn, first the customer ID will be validated. 
+An Ajax call is made by passing the provided customer ID to the web API to the URL ValidateCustomerRequestUrl in constants file for validating the ID.  
 
-If it is not a valid customer, then an error message is displayed on the screen.
+```
+//ValidateCustomer function validates the customer id which is declared in the URL
+function validateCustomer(id) {
+    var customerId,
+        result = {};
+    customerId = id;
+    //Below ajax call to API to validate the customer id
+    $.ajax({
+        type: 'GET',
+        url: globalVars.ValidateCustomerRequestUrl,//Value fetched from the constants.js file
+        data: {
+            apiLoginId: globalVars.ApiLoginID,//Value fetched from the constants.js file
+            apiTransactionKey: globalVars.ApiTransactionKey,//Value fetched from the constants.js file
+            customerId: customerId
+        },
+        async: false,
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function (data) {
+            var valid;
+            if (data.status) {// if the customer id is valid
+                valid = true;
+            } else {
+                valid = false;
+            }
+            result = {
+                valid: valid,
+                status: data.status,
+                message: data.errorMessage
+            };
+        },
+        error: function (textStatus) {
+            result = {
+                valid: false,
+                status: false,
+                message: textStatus
+            };
+        }
+    });
+    return result;
+}
+```
+If it is a valid customer ID then the **acceptCustomer** method is called. 
+If the customer ID is not valid we will display the error message recieved from the API call on the screen.
 
 ![Image of InvalidCustomer](images/InvalidCustomer.PNG)
 
 On click of Back to Home Page button, the page will be redirected to dashboard page.
 
-If it is a valid customer, then AcceptCustomer method is invoked.
-In this an Ajax call is made to the web API by passing the required parameters like customer ID, apiLoginId and apiTransactionKey.IframeCommunicator URL is also passed in Ajax for communicating between the hosted form and the web page.
-As a response we will get the token value. 
+The other scenario is also checked on loading the accept customer page, where the user by directly provides the customer ID as a query string in URL without populating it in the pop up and then loads the URL, the code first validates the customer ID parameter in the URL. 
+If it is valid then only **acceptCustomer** function is invoked.
 
-![Image of AcceptCustomerAjax](images/AcceptCustomerAjax.PNG)
+```
+//AcceptCustomer functionality implementation
+function acceptCustomer(id) {
+    var customerId = id;
+
+    // Below Ajax call to API to fetch token in response. Based on token form will be displayed
+    $.ajax({
+        type: 'GET',
+        url: globalVars.AcceptCustomerRequestUrl,//Value fetched from the constants.js file
+        data: {
+            apiLoginId: globalVars.ApiLoginID,//Value fetched from the constants.js file
+            apiTransactionKey: globalVars.ApiTransactionKey,//Value fetched from the constants.js file
+            customerId: customerId,
+            iFrameCommunicatorUrl: window.location.origin + '/iframeCommunicator.html'
+        },
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function (data) {
+            if (data.status) {//if response is success
+                //Assign the token value to the hidden field inside the form
+                document.getElementById('custtoken').value = data.successValue;
+
+                //To set url for the form in the HTML in Accept Customer section
+                document.getElementById('send_token').setAttribute('action', 'https://test.authorize.net/customer/manage');
+
+                //Submit form with token to load iframe
+                document.getElementById('send_token').submit();
+                document.getElementById('load_profile').style.display = 'block';
+            } else {
+                //on failure, show error message
+                document.getElementById('msgCS').innerHTML = '';
+                document.getElementById('msgCS').innerHTML = data.errorMessage;
+                var element = document.getElementById('alertCS');
+                element.classList.remove('alert-success');
+                element.classList.add('alert-danger');
+                element.style.display = 'block';
+            }
+            document.getElementById('acceptCustomer').style.display = 'block';
+            document.getElementById('acceptCustomerId').style.display = 'none';
+            document.getElementById('acceptCustomerManage').style.display = 'block';
+        },
+        error: function (textStatus) {
+            document.getElementById('msgCS').innerHTML = '';
+            document.getElementById('msgHS').innerHTML = textStatus;
+            var element = document.getElementById('alertCS');
+            element.classList.remove('alert-success');
+            element.classList.add('alert-danger');
+            element.style.display = 'block';
+        }
+    });
+}
+```
+
+In this an Ajax call is made to the web API by passing the required parameters like customer ID, apiLoginId and apiTransactionKey. IframeCommunicator URL is also passed in Ajax for communicating between the hosted form and the web page.
+As a response we will get the token value. 
 
 A iframe is defined in the HTML which is used to embed the hosted payment form in the web page. 
 
@@ -57,8 +183,8 @@ A form is also defined in the HTML with target ID of the above iframe. This form
 
 ![Image of CustomerForm](images/CustomerForm.PNG)
 
-After receiving the token, the form is submitted by passing the received token to the input in the form.
-When the form is posted, the hosted payment form is automatically displayed on the screen.
+After receiving the token from the acceptCustomer function, the form is submitted by passing the received token to the input in the form.
+When the form is posted, the accept customer form is automatically displayed on the screen.
 
 ![Image of CustomerPaymentForm](images/CustomerPaymentForm.PNG)
 
