@@ -1,6 +1,16 @@
 # Accept Suite Integration with Node.js WEB API
 
+## Getting Started
+
+These instructions is for running the Accept Suite UI on your local machine for development and testing purposes.
+
 # Deploy Accept Suite Node.js Application
+
+## Prerequisite:
+*	Node.js 4.1.2 or higher Download Link: https://nodejs.org/en/download/
+*   Sublime Text/Visual studio code 2017 or any HTML editor.
+*	Heroku account (New account can be created using the link https://signup.heroku.com/)
+*   Downlaod and install Heroku CLI using the link https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
 ## Very detailed explanation of each product type.
 Authorized.Net Accept suite has below products.
@@ -15,23 +25,13 @@ https://developer.authorize.net/api/reference/features/acceptjs.html
 https://developer.authorize.net/api/reference/features/accept_hosted.html
 https://developer.authorize.net/api/reference/features/customer_profiles.html#Using_the_Accept_Customer_Hosted_Form
 
-Readme files  of each product are available in the below link.
- ** acceptsuitenodeheroku\documents**
+Readme files  of each product are available in the below link.</br>
+ acceptsuitenodeheroku\documents
 
 ## Two ways to deploy Accept Suite Node.js Application
 
 ## [Manual Deployment](https://github.com/AuthorizeNet/accept-sample-app-node#Step-by-Step-Guide-for-Manual-Deployment)
 ## [Automatic Deployment](https://github.com/AuthorizeNet/accept-sample-app-node#Step-by-Step-Guide-for-Automatic-Deployment)
-
-## Step by Step Guide for Manual Deployment:
-
-These instructions is for running the Accept Suite UI on your local machine for development and testing purposes.
-
-## Prerequisite:
-*	Node.js 4.1.2 or higher Download Link: https://nodejs.org/en/download/
-*   Sublime Text/Visual studio code 2017 or any HTML editor.
-*	Heroku account (New account can be created using the link https://signup.heroku.com/)
-*   Downlaod and install Heroku CLI using the link https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
 ## Steps to download the code from the repository:
 
@@ -39,65 +39,42 @@ These instructions is for running the Accept Suite UI on your local machine for 
 
 * Popup Displays 2 Options Open in Desktop or Download ZIP
 
-![Image of CloneorDownloadButton](documents/images/githunlink.JPG)
+![Image of CloneorDownloadButton](docs/images/githunlink.JPG)
 
-*Click on Download ZIP and choose the folder C:\GitHUb_node to save.
-![Image of DownloadToGitHubFolder](documents/images/zipfile.JPG)
+* Click on Download ZIP and choose the folder C:\GitHUb_node to save.
+![Image of DownloadToGitHubFolder](docs/images/zipfile.JPG)
 
 * UnZip the folder accept-sample-app-node-master
 
-* Once UnZipped , accept-sample-app-node-master Folder contains css, js , HTML files along with few folders.
+## Merchant Authentication Details:
 
-![Image of FolderStructure](documents/images/folder_structure.JPG)
- 
+The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
 
-* Open the folder **Acceptsuitewebapi**
+* **Initially default sandbox credentials are provided, User can update his own Credentials.** 
 
-### Steps to deploy the application in Heroku
+* ClientKey
 
-•Open the command prompt in administrator mode
+![Image of ClientKey](docs/images/clientKey.PNG)
 
-•Set proxy using the below command(Provide your username and password)<br/>
-     **set HTTP_PROXY=http://USERNAME:PASSWORD@internet.visa.com:80**<br/>
-     **set HTTPS_PROXY=http://USERNAME:PASSWORD@internet.visa.com:443**
+* ApiLoginID
 
-•Run the command "heroku login" and provide the login credentials for heroku.
+![Image of ApiLoginID](docs/images/apiLogin.PNG)
 
-•Go inside the application & then go to the folder src path where acceptsuite.js  file exists and  then copy the path , paste it to command prompt & 
-run the command "git init" (before running the command, delete the git folder in the root path if exists)
+* ApiTransactionKey
 
-•Run the command "heroku create ". Eg:- heroku create webnodeapi
+![Image of ApiTransactionKey](docs/images/apiTransactionKey.PNG)
 
-•Check the remote URL using the command “git remote -v”. it should be the created app's git URL,<br/>
- Eg:-   
-        **heroku  https://git.heroku.com/webnodeapi.git (fetch)**<br/>
-        **heroku  https://git.heroku.com/webnodeapi.git (push)**
+## API URL's Section
 
-•Run “git status” command, it will provide the details of file not pushed to heroku git.
+The WEB API URLs should be provided in constant.js file in the following format.
 
+Format for WEB API URL 
+https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 
-•Run the command “git add .” to add the untracked file to heroku git.
+* **ApiMethodName** parameter is dynamic and that need to be replaced with Product Type name. 
 
-
-•Run "git commit –am "PUSH_COMMENT"" command to commit the changes to heroku git.
-
-
-•Finally, run the command “git push heroku master” which will do the deployment. Deployed URL will be displayed on successful deployment.
-
-* Once deployed Successfully , update the URL's in Constants.js file as described below.
-
-* **Constants.js file contains Keys which is used globally across the application.**
-
-## API URL's Section:
-
-The URLs should be provided with in the following format.
-
-**https://acceptsuitenodejsui.herokuapp.com/index_all.html**
-
-* ** ApiMethodName ** parameter is dynamic and that need to be replaced with Product Type name 
-detailed description is explained below.
-
-* AcceptJSRequestUrl/AcceptUI.JS RequestUrl : URL to invoke Accept JS web service.
+ Below are the sample URLs of web api methods
+ * AcceptJSRequestUrl/AcceptUI.JS RequestUrl : URL to invoke Accept JS web service.
 
 	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/AcceptJs**
 
@@ -115,49 +92,41 @@ detailed description is explained below.
 * ValidateCustomerRequestUrl : URL to invoke a web api method to validate customer ID.
 
 	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/validateCustomer**
- 
- 
-## Merchant Authentication Details:
 
-The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
+## Steps to deploy the application in Heroku
 
-* ** Initially default sandbox credentials are provided, User can update his own Credentials. **
+*   [Download the code to the local folder](../master/README.md#steps-to-download-the-code-from-the-repository)
 
-* ClientKey
+*	Open the command prompt in administrator mode.
 
-![Image of ClientKey](documents/images/clientKey.PNG)
+*   Set proxy using the below command(Provide your username and password)<br/>
+    set HTTP_PROXY=http://USERNAME:PASSWORD@PROXY_DOMAIN:PROXY_PORT<br/>
+    set HTTPS_PROXY=http://USERNAME:PASSWORD@PROXY_DOMAIN:PROXY_PORT
+	
+*	Run the command **heroku login**  and provide the login credentials for heroku.
 
-* ApiLoginID
+* [Web api Deployment](https://github.com/acharjee0712/accept-sample-app-node/blob/master/src/README.md#Steps to deploy the web API in Heroku )
 
-![Image of ApiLoginID](documents/images/apiLogin.PNG)
+*	Navigate to the root folder where index_all.html file exists and run the command **git init** (before running the command, delete the git folder in the root path if exists)
 
-* ApiTransactionKey
+* Run the command "heroku create ". Eg:- heroku create acceptsuitenodejsui
 
-![Image of ApiTransactionKey](documents/images/apiTransactionKey.PNG)
-
-### Create Website on Heroku
-
-• Go to the the root folder path where index_all.html file exists & paste it to command prompt  and run the command "git init" 
-   (before running the command, delete the git folder in the root path if exists)
-
-• Run the command "heroku create ". Eg:- heroku create acceptsuitenodejsui
-
-•Check the remote URL using the command “git remote -v”. it should be the created app's git URL,<br/>
+* Check the remote URL using the command “git remote -v”. it should be the created app's git URL,<br/>
  Eg:- 
       **heroku  https://git.heroku.com/acceptsuitenodejsui.git (fetch)**<br/>
 	  **heroku  https://git.heroku.com/acceptsuitenodejsui.git (push)**
 	  
-• Run “git status” command, it will provide the details of file not pushed to heroku git.
+* Run “git status” command, it will provide the details of file not pushed to heroku git.
 
-• Run "git commit –am "PUSH_COMMENT"" command to commit the changes to heroku git.
+* Run "git commit –am "PUSH_COMMENT"" command to commit the changes to heroku git.
 
-•Finally, run the command “git push heroku master” which will do the deployment. Deployed URL will be displayed on successful deployment.
+* Finally, run the command “git push heroku master” which will do the deployment. Deployed URL will be displayed on successful deployment.
 
 ## browse the website
 
 Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
-![Image of dashboard](documents/images/dashboard.PNG)
+![Image of dashboard](docs/images/dashboard.JPG)
 
 ## Step by Step Guide for Automatic Deployment
 
@@ -165,13 +134,13 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
 *	[Prerequisite](../master/README.md#prerequisite)
 
-#Steps to follow while running the  shell script
-• Double click the shell script file **deploy.sh** at .\accept-sample-app-node\scripts folder.
+# Steps to follow while running the  shell script
+* Double click the shell script file **deploy.sh** at .\accept-sample-app-node\scripts folder.
 
 *   Application will be launched automatically on successful deployment and the URL will be 
   URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html in Chrome Browser.
 
-![Image of dashboard](documents/images/dashboard.PNG)
+![Image of dashboard](docs/images/dashboard.JPG)
 
 ##Trouble Shoot
 
