@@ -102,7 +102,7 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 
 *   Set proxy using the below command(Provide your username and password)<br/>
     set HTTP_PROXY=http://USERNAME:PASSWORD@PROXY_DOMAIN:PROXY_PORT<br/>
-    set HTTPS_PROXY=http://USERNAME:PASSWORD@PROXY_DOMAIN:PROXY_PORT
+    set HTTPS_PROXY=http://USERNAME:PASSWORD@PROXY_DOMAIN:PROXY_PORT<br/>
 	
 *	Run the command **heroku login**  and provide the login credentials for heroku.
 
