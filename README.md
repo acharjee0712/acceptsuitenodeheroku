@@ -1,16 +1,6 @@
 # Accept Suite Integration with Node.js WEB API
 
-## Getting Started
-
-These instructions is for running the Accept Suite UI on your local machine for development and testing purposes.
-
 # Deploy Accept Suite Node.js Application
-
-## Prerequisite:
-*	Node.js 4.1.2 or higher Download Link: https://nodejs.org/en/download/
-*   Sublime Text/Visual studio code 2017 or any HTML editor.
-*	Heroku account (New account can be created using the link https://signup.heroku.com/)
-*   Downlaod and install Heroku CLI using the link https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
 ## Very detailed explanation of each product type.
 Authorized.Net Accept suite has below products.
@@ -31,7 +21,7 @@ Readme files  of each product are available in the below link.</br>
 ## Two ways to deploy Accept Suite Node.js Application
 
 
-## [Manual Deployment](../master/README.md#Steps-to-deploy-the-application-in-Heroku)
+## [Manual Deployment](../master/README.md#Step by Step Guide for Manual Deployment:)
 ## [Automatic Deployment](../master/README.md#Step-by-Step-Guide-for-Automatic-Deployment)
 
 ## Steps to download the code from the repository:
@@ -45,25 +35,33 @@ Readme files  of each product are available in the below link.</br>
 * Click on Download ZIP and choose the folder C:\GitHUb_node to save.
 ![Image of DownloadToGitHubFolder](docs/images/zipfile.JPG)
 
-* UnZip the folder accept-sample-app-node-master
+* UnZip the folder accept-sample-app-node-master.zip
 
-## Merchant Authentication Details:
+* Once UnZipped , accept-sample-app-dotnet-master Folder contains css, js , HTML files along with few folders.
 
-The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
+![Image of FolderStructure](docs/images/FolderStructure.PNG)
 
-* **Initially default sandbox credentials are provided, User can update his own Credentials.** 
+## Step by Step Guide for Manual Deployment:
 
-* ClientKey
+## Prerequisite:
+*	Node.js 4.1.2 or higher Download Link: https://nodejs.org/en/download/
+*   Sublime Text/Visual studio code 2017 or any HTML editor.
+*	Heroku account (New account can be created using the link https://signup.heroku.com/)
+*   Downlaod and install Heroku CLI using the link https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
-![Image of ClientKey](docs/images/clientKey.PNG)
+*   [Download the code to the local folder](../master/README.md#steps-to-download-the-code-from-the-repository)
 
-* ApiLoginID
+* Open the folder **src**
 
-![Image of ApiLoginID](docs/images/apiLogin.PNG)
+* [ Details steps for Web Api Deployment ](../master/src/README.mdREADME.md#Steps to deploy the web API in Heroku)
 
-* ApiTransactionKey
+* Once deployed Successfully by following the steps mentioned in the above link, update the URL's in Constants.js file as described below.
 
-![Image of ApiTransactionKey](docs/images/apiTransactionKey.PNG)
+* Constants.js file is located inside assets folder in the path \assets\js\accept-suite.
+
+![Image of constantsPath](docs/images/constantsPath.PNG)
+
+* **Constants.js file contains Keys which is used globally across the application.**
 
 ## API URL's Section
 
@@ -93,10 +91,26 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 * ValidateCustomerRequestUrl : URL to invoke a web api method to validate customer ID.
 
 	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/validateCustomer**
+	
+	## Merchant Authentication Details:
 
-## Steps to deploy the application in Heroku
+The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
 
-*   [Download the code to the local folder](../master/README.md#steps-to-download-the-code-from-the-repository)
+* **Initially default sandbox credentials are provided, User can update his own Credentials.** 
+
+* ClientKey
+
+![Image of ClientKey](docs/images/clientKey.PNG)
+
+* ApiLoginID
+
+![Image of ApiLoginID](docs/images/apiLogin.PNG)
+
+* ApiTransactionKey
+
+![Image of ApiTransactionKey](docs/images/apiTransactionKey.PNG)
+
+##Create Website on Heroku
 
 *	Open the command prompt in administrator mode.
 
@@ -106,7 +120,7 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 	
 *	Run the command **heroku login**  and provide the login credentials for heroku.
 
-## [Web api Deployment](https://github.com/acharjee0712/acceptsuitenodeheroku/blob/master/src/README.md#Steps to deploy the web API in Heroku)
+## [ Details steps for Web Api Deployment ](../master/src/README.mdREADME.md#Steps to deploy the web API in Heroku)
 
 *	Navigate to the root folder where index_all.html file exists and run the command **git init** (before running the command, delete the git folder in the root path if exists)
 
