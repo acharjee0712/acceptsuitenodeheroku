@@ -30,8 +30,8 @@ Readme files  of each product are available in the below link.</br>
 
 ## Two ways to deploy Accept Suite Node.js Application
 
-## [Manual Deployment](../master/README#Step-by-Step-Guide-for-Manual-Deployment)
-## [Automatic Deployment](../master/README#Step-by-Step-Guide-for-Automatic-Deployment)
+## [Manual Deployment](../master/README.md#Steps to deploy the application in Heroku)
+## [Automatic Deployment](../master/README.md#Step-by-Step-Guide-for-Automatic-Deployment)
 
 ## Steps to download the code from the repository:
 
