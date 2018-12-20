@@ -96,7 +96,7 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 
 ## Steps to deploy the application in Heroku
 
-*   [Download the code to the local folder](../master/README.md#steps-to-download-the-code-from-the-repository)
+*   [Download the code to the local folder](tree/master/src/README.md#steps-to-download-the-code-from-the-repository)
 
 *	Open the command prompt in administrator mode.
 
