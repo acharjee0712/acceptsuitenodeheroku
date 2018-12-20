@@ -5,16 +5,21 @@ var ApiControllers = require('authorizenet').APIControllers;
 var utils = require('../utils.js');
 
 
-function getAnAcceptPaymentPage(apiloginid, transactionkey, customerProfileId, hostedPaymentIFrameCommunicatorUrl, callback) {
+function getAnAcceptPaymentPage(apiloginid, transactionkey, customerProfileId = null, hostedPaymentIFrameCommunicatorUrl, callback) {
 
 	var merchantAuthenticationType = new ApiContracts.MerchantAuthenticationType();
 	merchantAuthenticationType.setName(apiloginid);
 	merchantAuthenticationType.setTransactionKey(transactionkey);
-	var getRequest = new ApiContracts.GetCustomerProfileRequest();
-	getRequest.setCustomerProfileId(customerProfileId);
+	var custProfile = new ApiContracts.CustomerProfilePaymentType();
+	if(customerProfileId) {
+	 custProfile.setCustomerProfileId(customerProfileId);
+	}
 	var transactionRequestType = new ApiContracts.TransactionRequestType();
 	transactionRequestType.setTransactionType(ApiContracts.TransactionTypeEnum.AUTHCAPTURETRANSACTION);
 	transactionRequestType.setAmount("99");
+	if(customerProfileId) {
+	 transactionRequestType.setProfile(custProfile);
+	}
 
 	var setting1 = new ApiContracts.SettingType();
 	setting1.setSettingName('hostedPaymentButtonOptions');

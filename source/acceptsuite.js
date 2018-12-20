@@ -10,7 +10,7 @@ var createpayment = require('./Authorize_Net/Authorizenet-Api/PaymentTransaction
 var sslOptions = { //ssl certficate
   key: fs.readFileSync('key.pem'),
   cert: fs.readFileSync('cert.pem'),
-  passphrase: '0712'
+  passphrase: fs.readFileSync('constants.js')
 };
 app.use(function (req, res, next) { //allow origin for cors
   res.header("Access-Control-Allow-Origin", "*");

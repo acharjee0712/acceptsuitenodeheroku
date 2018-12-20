@@ -11,43 +11,35 @@ Developer Guide to deploy the Node.js using Express.js Web API Application
 ## Steps to deploy the web API in Heroku 
 
 
-•Clone the repsitory or download the code to the local folder.
+*   [Download the code to local folder](../../../master/README.md#steps-to-download-the-code-from-the-repository)  **If the code is not downloaded already**
 
+*   Navigate to the folder .\accept-sample-app-node\src
 
-•Open the command prompt in administrator mode.
+* 	Open the command prompt in administrator mode.
 
+* 	Set proxy using the below command(Provide your username and password)<br/>
+    import HTTP_PROXY=http://USERNAME:PASSWORD@PROXY_DOMAIN:PROXY_PORT<br/>
+    import HTTPS_PROXY=http://USERNAME:PASSWORD@PROXY_DOMAIN:PROXY_PORT
 
-•Set proxy using the below command(Provide your username and password)
- set HTTP_PROXY=http://USERNAME:PASSWORD@internet.visa.com:80
- set HTTPS_PROXY=http://USERNAME:PASSWORD@internet.visa.com:443
-
-
-•Run the command "heroku login" and provide the login credentials for heroku.
-
-
-•Go inside the application root folder path & then go to the folder Acceptsuitewebapipath where acceptsuite.js  file exists and  then copy the path , paste it to command prompt & 
-  run the command "git init" (before running the command, delete the git folder in the root path if exists)
-
-
-•Run the command "heroku create APPLICATIONNAME". Eg:- heroku create webnodeapi
-
-
-•Check the remote URL using the command “git remote -v”. it should be the created app's git URL.
- Eg:-
- heroku  https://git.heroku.com/webnodeapi.git (fetch)
+* Run the command "heroku login" and provide the login credentials for heroku.
+* Run the command **git init** (before running the command, delete the git folder in the root path if exists)
+* Run the command "heroku create APPLICATIONNAME". Eg:- heroku create webnodeapi
+* Check the remote URL using the command “git remote -v”. it should be the created app's git URL.
+   Eg:-
+      heroku  https://git.heroku.com/webnodeapi.git (fetch)
       heroku  https://git.heroku.com/webnodeapi.git (push)
 
-•Run “git status” command, it will provide the details of file not pushed to heroku git.
+* Run “git status” command, it will provide the details of file not pushed to heroku git.
 
-•Run the command “git add .” to add the untracked file to heroku git.
+* Run the command “git add .” to add the untracked file to heroku git.
 
-•Run "git commit –am "PUSH_COMMENT"" command to commit the changes to heroku git.
+* Run "git commit –am "PUSH_COMMENT"" command to commit the changes to heroku git.
 
-•Finally, run the command “git push heroku master” which will do the deployment. Deployed URL will be displayed on successful deployment.
+* Finally, run the command “git push heroku master” which will do the deployment. Deployed URL will be displayed on successful deployment.
 
 
 ## URL format of Accept Suite WEB
- https://APPLICATIONNAME.herokuapp.com/acceptsuite/METHODNAME?REQUIREDQUERYPARAMETERS
+    https://APPLICATIONNAME.herokuapp.com/acceptsuite/METHODNAME?REQUIREDQUERYPARAMETERS
 
 Eg:- https://webnodeapi.herokuapp.com/acceptsuite/AcceptJs?apiLoginId=VALUE&apiTransactionKey=VALUE&Token=VALUE
 

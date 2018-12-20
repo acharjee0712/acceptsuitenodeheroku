@@ -8,11 +8,11 @@ echo "PLEASE TERMINATE JOB(CTRL+C with Y as INPUT) AFTER HEROKU LOGIN TO CONTINU
 heroku login --interactive
 #AcceptSuiteWebAPI
 cd ..
-cd AcceptSuiteWebApi
+cd src
 echo "Initiating git repository.."
 git init
 read
-echo "Heroku app rubyacceptsuiteapi will get deleted if already exists.Do you wish to continue (y/n)?"
+echo "Heroku app webnodeapi will get deleted if already exists.Do you wish to continue (y/n)?"
 read input
 echo $input
 if [ "$input" == "n" ];
@@ -20,11 +20,10 @@ then
  exit 1
 fi
 echo Deleting the app if already exists
-heroku apps:destroy --app rubyacceptsuiteapi  --confirm rubyacceptsuiteapi
+heroku apps:destroy --app webnodeapi  --confirm webnodeapi
 echo "Starting the app creation.."
-heroku create rubyacceptsuiteapi
+heroku create webnodeapi
 git remote -v
-bundle install
 git status
 git add .
 git commit -am "push acceptsuitecode"
@@ -35,20 +34,20 @@ git push heroku master
 cd ..
 echo "Initiating git repository.."
 git init
-echo "Heroku app rubyacceptsuiteui will get deleted if already exists.Do you wish to continue(y/n)?"
+echo "Heroku app acceptsuitenodejsui will get deleted if already exists.Do you wish to continue(y/n)?"
 read input
 if [ "$input" == "n" ];
 then
  exit 1
 fi
-heroku apps:destroy --app rubyacceptsuiteui  --confirm rubyacceptsuiteui
+heroku apps:destroy --app acceptsuitenodejsui  --confirm acceptsuitenodejsui
 echo "Starting the app creation.."
-heroku create rubyacceptsuiteui
+heroku create acceptsuitenodejsui
 git remote -v
 git status
 git add .
 git commit -am "push acceptsuitecodeui"
 git push heroku master
 echo Launching the app..
-start https://rubyacceptsuiteui.herokuapp.com/index_all.html
+start https://acceptsuitenodejsui.herokuapp.com/index_all.html
 exit 0
