@@ -96,7 +96,7 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 
 ## Steps to deploy the application in Heroku
 
-*   [Download the code to the local folder](tree/master/src/README.md#steps-to-download-the-code-from-the-repository)
+*   [Download the code to the local folder](../master/README.md#steps-to-download-the-code-from-the-repository)
 
 *	Open the command prompt in administrator mode.
 
@@ -106,7 +106,7 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 	
 *	Run the command **heroku login**  and provide the login credentials for heroku.
 
-* [Web api Deployment](../master/src/README.md#Steps to deploy the web API in Heroku )
+* [Web api Deployment](../../tree/master/src/README.md#Steps to deploy the web API in Heroku )
 
 *	Navigate to the root folder where index_all.html file exists and run the command **git init** (before running the command, delete the git folder in the root path if exists)
 

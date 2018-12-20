@@ -39,7 +39,7 @@ Developer Guide to deploy the Node.js using Express.js Web API Application
 
 
 ## URL format of Accept Suite WEB
-    https://APPLICATIONNAME.herokuapp.com/acceptsuite/METHODNAME?REQUIREDQUERYPARAMETERS<br/>
+ **https://APPLICATIONNAME.herokuapp.com/acceptsuite/METHODNAME?REQUIREDQUERYPARAMETERS **<br/>
 Eg:- https://webnodeapi.herokuapp.com/acceptsuite/AcceptJs?apiLoginId=VALUE&apiTransactionKey=VALUE&Token=VALUE
 
 
