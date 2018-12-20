@@ -11,7 +11,7 @@ Developer Guide to deploy the Node.js using Express.js Web API Application
 ## Steps to deploy the web API in Heroku 
 
 
-*   [Download the code to local folder](../../../master/README.md#steps-to-download-the-code-from-the-repository)  **If the code is not downloaded already**
+*   [Download the code to local folder](https://github.com/acharjee0712/acceptsuitenodeheroku/blob/master/README.md#steps-to-download-the-code-from-the-repository)  **If the code is not downloaded already**
 
 *   Navigate to the folder .\accept-sample-app-node\src
 
