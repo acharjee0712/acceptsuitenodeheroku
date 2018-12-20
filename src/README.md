@@ -25,7 +25,7 @@ Developer Guide to deploy the Node.js using Express.js Web API Application
 * Run the command **git init** (before running the command, delete the git folder in the root path if exists)
 * Run the command "heroku create APPLICATIONNAME". Eg:- heroku create webnodeapi
 * Check the remote URL using the command “git remote -v”. it should be the created app's git URL.
-   Eg:-
+   Eg:-<br/>
      heroku  https://git.heroku.com/webnodeapi.git (fetch)<br/>
      heroku  https://git.heroku.com/webnodeapi.git (push)
 
