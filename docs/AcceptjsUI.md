@@ -19,7 +19,7 @@ There are two ways to navigate to Accept.js UI page.
  
 The URL format for Accept.js UI is as follows,
 
-https://localhost:PortNumber/index.html?ProductType=Acceptui
+https://myappnodeapiui.herokuapp.com/index.html?producttype=acceptui
 
 ## Workflow
 
