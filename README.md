@@ -21,7 +21,7 @@ Readme files  of each product are available in the below link.</br>
 ## Two ways to deploy Accept Suite Node.js Application
 
 
-## [Manual Deployment](../master/README.md#Step by Step Guide for Manual Deployment)
+## [Manual Deployment](../master/README.md#Step-by-Step-Guide-for-Manual-Deployment)
 ## [Automatic Deployment](../master/README.md#Step-by-Step-Guide-for-Automatic-Deployment)
 
 ## Steps to download the code from the repository:
@@ -39,9 +39,9 @@ Readme files  of each product are available in the below link.</br>
 
 * Once UnZipped , accept-sample-app-dotnet-master Folder contains css, js , HTML files along with few folders.
 
-![Image of FolderStructure](docs/images/FolderStructure.PNG)
+![Image of FolderStructure](docs/images/FolderStructure.JPG)
 
-## Step by Step Guide for Manual Deployment:
+## Step by Step Guide for Manual Deployment
 
 ## Prerequisite:
 *	Node.js 4.1.2 or higher Download Link: https://nodejs.org/en/download/
@@ -53,13 +53,13 @@ Readme files  of each product are available in the below link.</br>
 
 * Open the folder **src**
 
-* [ Details steps for Web Api Deployment ](../master/src/README.mdREADME.md#Steps to deploy the web API in Heroku)
+* [ Details steps for Web Api Deployment ](../master/src/README.mdREADME.md#Steps-to-deploy-the-web-API-in-Heroku)
 
 * Once deployed Successfully by following the steps mentioned in the above link, update the URL's in Constants.js file as described below.
 
 * Constants.js file is located inside assets folder in the path \assets\js\accept-suite.
 
-![Image of constantsPath](docs/images/constantsPath.PNG)
+![Image of constantsPath](docs/images/constantsPath.JPG)
 
 * **Constants.js file contains Keys which is used globally across the application.**
 
@@ -151,6 +151,8 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
 # Steps to follow while running the  shell script
 * Double click the shell script file **deploy.sh** at .\accept-sample-app-node\scripts folder.
+
+[Image of deployment file](docs/images/deploy.JPG)
 
 *   Application will be launched automatically on successful deployment and the URL will be 
   URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html in Chrome Browser.
