@@ -19,7 +19,7 @@ There are two ways to navigate to Accept.js page.
  
 The URL format for Accept.js is as follows,
 
-https://myappnodeapiui.herokuapp.com/index.html?producttype=acceptjs
+https://acceptsuitenodejsui.herokuapp.com/index.html?producttype=acceptjs
 
 ## Workflow
 

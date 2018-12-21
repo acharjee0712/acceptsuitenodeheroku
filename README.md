@@ -159,7 +159,7 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
 ## Trouble Shoot
 
-• While deploying the app, if encounter with  could not resolve host/could not read from remote repository issue  , please follow the steps describe below 
+• While deploying the app, if encounter with  could not resolve host/could not read from remote repository issue  , please follow the steps describe below<br/> 
 ![Images of  could not resolve host](docs/images/deploy_issue.JPG)
 
 • Download the certificate file i.e:- cacert.pem file.

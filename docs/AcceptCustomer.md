@@ -13,7 +13,7 @@ There are two ways to navigate to Accept.js page.
  
 The URL format for Accept Customer is as follows,
 
-https://myappnodeapiui.herokuapp.com/index.html?producttype=acceptcustomer&CustomerId=1813212446
+https://acceptsuitenodejsui.herokuapp.com/index.html?producttype=acceptcustomer&CustomerId=1813212446
 
 ## Workflow
 

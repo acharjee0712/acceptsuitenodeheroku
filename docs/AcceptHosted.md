@@ -19,13 +19,13 @@ There are two ways to navigate to Accept Hosted page.
  
 The URL format for Accept Hosted is as follows,
 
-https://myappnodeapiui.herokuapp.com/index.html?producttype=accepthosted
+https://acceptsuitenodejsui.herokuapp.com/index.html?producttype=accepthosted
 
 The sample URL format for Accept Hosted without Customer ID is as follows,
-https://myappnodeapiui.herokuapp.com/index.html?producttype=accepthosted
+https://acceptsuitenodejsui.herokuapp.com/index.html?producttype=accepthosted
 
 The sample URL format for Accept Hosted with passing customer ID is as follows,
-https://myappnodeapiui.herokuapp.com/index.html?producttype=accepthosted&CustomerId=1813212446
+https://acceptsuitenodejsui.herokuapp.com/index.html?producttype=accepthosted&CustomerId=1813212446
 
 ## Workflow
 
