@@ -53,7 +53,7 @@ Readme files  of each product are available in the below link.</br>
 
 * Open the folder **src**
 
-* [ Details steps for Web Api Deployment ](../master/src/README.mdREADME.md#Steps-to-deploy-the-web-API-in-Heroku)
+* [ Details steps for Web Api Deployment ](../master/src/README.md#Steps-to-deploy-the-web-API-in-Heroku)
 
 * Once deployed Successfully by following the steps mentioned in the above link, update the URL's in Constants.js file as described below.
 
@@ -92,7 +92,7 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 
 	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/validateCustomer**
 	
-	## Merchant Authentication Details:
+## Merchant Authentication Details:
 
 The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
 
@@ -110,7 +110,7 @@ The following are the parameters with values that remains constant throughout th
 
 ![Image of ApiTransactionKey](docs/images/apiTransactionKey.PNG)
 
-###Create Website on Heroku
+## Create Website on Heroku
 
 *	Open the command prompt in administrator mode.
 
@@ -157,7 +157,7 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
 ![Image of dashboard](docs/images/dashboard.JPG)
 
-##Trouble Shoot
+## Trouble Shoot
 
 • While deploying the app, if encounter with  could not resolve host/could not read from remote repository issue  , please follow the steps describe below 
 ![Images of  could not resolve host](docs/images/deploy_issue.JPG)
