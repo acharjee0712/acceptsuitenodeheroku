@@ -110,7 +110,7 @@ The following are the parameters with values that remains constant throughout th
 
 ![Image of ApiTransactionKey](docs/images/apiTransactionKey.PNG)
 
-##Create Website on Heroku
+###Create Website on Heroku
 
 *	Open the command prompt in administrator mode.
 
@@ -119,8 +119,6 @@ The following are the parameters with values that remains constant throughout th
     set HTTPS_PROXY=http://USERNAME:PASSWORD@PROXY_DOMAIN:PROXY_PORT<br/>
 	
 *	Run the command **heroku login**  and provide the login credentials for heroku.
-
-## [ Details steps for Web Api Deployment ](../master/src/README.mdREADME.md#Steps to deploy the web API in Heroku)
 
 *	Navigate to the root folder where index_all.html file exists and run the command **git init** (before running the command, delete the git folder in the root path if exists)
 
@@ -152,7 +150,7 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 # Steps to follow while running the  shell script
 * Double click the shell script file **deploy.sh** at .\accept-sample-app-node\scripts folder.
 
-[Image of deployment file](docs/images/deploy.JPG)
+![Image of deployment file](docs/images/deploy.JPG)
 
 *   Application will be launched automatically on successful deployment and the URL will be 
   URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html in Chrome Browser.
@@ -162,7 +160,7 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 ##Trouble Shoot
 
 • While deploying the app, if encounter with  could not resolve host/could not read from remote repository issue  , please follow the steps describe below 
-![Images of  could not resolve host](documents/images/deploy_issue.JPG)
+![Images of  could not resolve host](docs/images/deploy_issue.JPG)
 
 • Download the certificate file i.e:- cacert.pem file.
 
