@@ -11,7 +11,7 @@ Developer Guide to deploy the Node.js using Express.js Web API Application
 ## Steps to deploy the web API in Heroku 
 
 
-*   [Download the code to local folder](https://github.com/acharjee0712/acceptsuitenodeheroku/blob/master/README.md#steps-to-download-the-code-from-the-repository)  **If the code is not downloaded already**
+*   [Download the code to local folder](../README.md#steps-to-download-the-code-from-the-repository)  **If the code is not downloaded already**
 
 *   Navigate to the folder .\accept-sample-app-node\src
 
@@ -41,6 +41,22 @@ Developer Guide to deploy the Node.js using Express.js Web API Application
 ## URL format of Accept Suite WEB
 https://APPLICATIONNAME.herokuapp.com/acceptsuite/METHODNAME?REQUIREDQUERYPARAMETERS <br/>
 Eg:- https://webnodeapi.herokuapp.com/acceptsuite/AcceptJs?apiLoginId=VALUE&apiTransactionKey=VALUE&Token=VALUE
+
+For Instance we will verify one of the API Method Validate Customer.
+https://webnodeapi.herokuapp.com/acceptsuite/ValidateCustomer?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&customerId=1813212446
+
+* Sample Request URL
+
+**Validate Customer API**: https://webnodeapi.herokuapp.com/acceptsuite/ValidateCustomer??apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&customerId=1813212446
+
+**Accept JS/UI**: https://webnodeapi.herokuapp.com/acceptsuite/AcceptJs?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&token=eyJjb2RlIjoiNTBfMl8wNjAwMDUyMkIzMkVGQTMyOURENzIzMkFCRENERTczM0JCQkY5RTEyMDdGOUUyMEQxQzJFNEMwNjk0QTQzNjdCQUY5NDZFMDRFNkNBRkRCOEZFQjA4NDI5MjE5OEQyOUI2ODdDMDc3IiwidG9rZW4iOiI5NTM4OTk0MTEwNDY1ODgzMjA0NjAzIiwidiI6IjEuMSJ9
+
+* Response : 
+{"status":true,"successValue":"I00001 Successful.","errorMessage":null}
+
+![Service-Response.PNG](images/Service-Response.JPG)
+
+After successful validation of Web API URL, refer to the [URL](../README.md#Step-by-Step-Guide-for-Manual-Deployment) for the deployment of UI application.
 
 
 ## QueryParameter Details
