@@ -54,7 +54,7 @@ https://webnodeapi.herokuapp.com/acceptsuite/ValidateCustomer?apiLoginId=78BZ5Xp
 * Response : 
 {"status":true,"successValue":"I00001 Successful.","errorMessage":null}
 
-![Service-Response.JPG](docs/images/Service-Response.JPG)
+![Service-Response.JPG](../docs/images/Service-Response.JPG)
 
 After successful validation of Web API URL, refer to the [URL](../README.md#Step-by-Step-Guide-for-Manual-Deployment) for the deployment of UI application.
 

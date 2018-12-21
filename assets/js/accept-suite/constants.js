@@ -2,11 +2,11 @@ var globalVars = {
 
     // Default sandbox credentials
 
-    ClientKey: '885qTmu8Mk82TyJr3P8JZXRdeJnesy4LC4VM8XvvE9e78z6ENhR5zt82zW4kSGz5',
+    ClientKey: '6C47PepC2NyJ2dgTy89U56xnan24H3cb363wxvBC5DP9Cjk5Fwp6b4q2YBnjU2Xp',
 
-    ApiLoginID: '6u3YgDH4e',
+    ApiLoginID: '78BZ5Xprry',
 
-    ApiTransactionKey: '7RG599ZKdyfk248e',
+    ApiTransactionKey: '8s2F95Q7brhHd7Tn',
 
 
     // Web API URL's
@@ -34,6 +34,6 @@ var globalVars = {
 
     // available customer id
 
-    ValidCustomer: '1916219194'
+    ValidCustomer: '1813212446'
 
 }
