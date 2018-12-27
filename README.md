@@ -62,14 +62,6 @@ Readme files  of each product are available in the below link.</br>
 
 * [ Details steps for Web Api Deployment ](../master/src/README.md#Steps-to-deploy-the-web-API-in-Heroku)
 
-* Once deployed Successfully by following the steps mentioned in the above link, update the URL's in Constants.js file as described below.
-
-* Constants.js file is located inside assets folder in the path \assets\js\accept-suite.
-
-![Image of constantsPath](docs/images/constantsPath.JPG)
-
-* **Constants.js file contains Keys which is used globally across the application.**
-
 ## API URL's Section
 
 The WEB API URLs should be provided in constant.js file in the following format.
@@ -77,27 +69,31 @@ The WEB API URLs should be provided in constant.js file in the following format.
 Format for WEB API URL 
 https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 
-* **ApiMethodName** parameter is dynamic and that need to be replaced with Product Type name. 
+* **ApiMethodName** parameter is dynamic and that need to be replaced with Product Type name.  
+
+* **APPLICATIONNAME** parameter is dynamic and it took value by using "jsondata.apiAppnName" from userInputs.json file (scripts/userInputs.json).
+
+* userInputs.json file has the default values for application name as well as for hosting the application in web page.
 
  Below are the sample URLs of web api methods
- * AcceptJSRequestUrl/AcceptUI.JS RequestUrl : URL to invoke Accept JS web service.
+ * AcceptJSRequestUrl/AcceptUI.JS RequestUrl : URL to invoke Accept JS web service. 
 
-	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/AcceptJs**
+	**Sample URL: 'https://' + jsondata.apiAppnName + '.herokuapp.com/acceptsuite/AcceptJs'**
 
 
 * AcceptHostedRequestUrl : URL to get the token value for Accept Hosted.
 
-	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/AcceptHosted**
+	**Sample URL: 'https://' + jsondata.apiAppnName + '.herokuapp.com/acceptsuite/AcceptHosted'**
 
 
 * AcceptCustomerRequestUrl : URL to get the token value for Accept Customer.
 
-	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/AcceptCustomer**
+	**Sample URL: 'https://' + jsondata.apiAppnName + '.herokuapp.com/acceptsuite/AcceptCustomer'**
 
 
 * ValidateCustomerRequestUrl : URL to invoke a web api method to validate customer ID.
 
-	**Sample URL: https://webnodeapi.herokuapp.com/acceptsuite/validateCustomer**
+	**Sample URL: 'https://' + jsondata.apiAppnName + '.herokuapp.com/acceptsuite/validateCustomer'**
 	
 ## Merchant Authentication Details:
 
