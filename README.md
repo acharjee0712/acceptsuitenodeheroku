@@ -48,6 +48,13 @@ Readme files  of each product are available in the below link.</br>
 *   Sublime Text/Visual studio code 2017 or any HTML editor.
 *	Heroku account (New account can be created using the link https://signup.heroku.com/)
 *   Downlaod and install Heroku CLI using the link https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+*   Download the jq file using the link https://stedolan.github.io/jq/download/ & rename the file as jq and 
+    placed it in your system on the path specified  C:\Program Files\Git\usr\bin
+![Image of jq file](docs/images/jq.JPG)  
+
+*  Add the path  C:\Program Files\Git\usr\bin into system environment variables , if not added
+![Image of env path ](docs/images/env.JPG) 
+
 
 *   [Download the code to the local folder](../master/README.md#steps-to-download-the-code-from-the-repository)
 
@@ -159,7 +166,8 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
 ## Trouble Shoot
 
-• While deploying the app, if encounter with  could not resolve host/could not read from remote repository issue  , please follow the steps describe below<br/> 
+• While deploying the app, if encounter with  could not resolve host/could not read from remote repository issue  , please follow the steps describe below <br/>
+
 ![Images of  could not resolve host](docs/images/deploy_issue.JPG)
 
 • Download the certificate file i.e:- cacert.pem file.

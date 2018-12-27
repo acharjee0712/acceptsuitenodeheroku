@@ -1,7 +1,18 @@
-var globalVars = {
+/*global
+  $,window
+*/
+'use strict';
 
-    // Default sandbox credentials
-
+var jsondata = "";
+var globalVars = "";
+function loadJSON() {
+    $.ajax({
+        url: '../../../scripts/userInputs.json',
+        async: false,
+        dataType: 'json',
+        success: function (jsondata) {
+            globalVars = {
+// Default sandbox credentials
     ClientKey: '6C47PepC2NyJ2dgTy89U56xnan24H3cb363wxvBC5DP9Cjk5Fwp6b4q2YBnjU2Xp',
 
     ApiLoginID: '78BZ5Xprry',
@@ -11,29 +22,18 @@ var globalVars = {
 
     // Web API URL's
 
-    AcceptJSRequestUrl : 'https://myappwebapi.herokuapp.com/acceptsuite/AcceptJs',
+    AcceptJSRequestUrl : 'https://' + jsondata.apiAppnName + '.herokuapp.com/acceptsuite/AcceptJs',
 
-    AcceptHostedRequestUrl : 'https://myappwebapi.herokuapp.com/acceptsuite/AcceptHosted',
+    AcceptHostedRequestUrl : 'https://' + jsondata.apiAppnName + '.herokuapp.com/acceptsuite/AcceptHosted',
 
-    AcceptCustomerRequestUrl : 'https://myappwebapi.herokuapp.com/acceptsuite/AcceptCustomer',
+    AcceptCustomerRequestUrl : 'https://' + jsondata.apiAppnName + '.herokuapp.com/acceptsuite/AcceptCustomer',
 
-    ValidateCustomerRequestUrl:'https://myappwebapi.herokuapp.com/acceptsuite/validateCustomer',
+    ValidateCustomerRequestUrl:'https://' + jsondata.apiAppnName + '.herokuapp.com/acceptsuite/validateCustomer',
+	// available customer id
+    ValidCustomer: '1916219194'
 
-
-    // below parameters is used to submit form with token value
-
-    HostedFormUrl: 'https://test.authorize.net/payment/payment',
-
-    CustomerFormUrl: 'https://test.authorize.net/customer/manage',
-
-
-    //IFrameCommunicatorUrl
-
-    IFrameCommunicatorUrl: window.location.origin + '/iframeCommunicator.html',
-
-
-    // available customer id
-
-    ValidCustomer: '1813212446'
-
+    };
+        }
+    });
 }
+window.onload = loadJSON();

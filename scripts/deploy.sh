@@ -1,3 +1,5 @@
+apiAppnName=$(jq -r '.apiAppnName' userInputs.json)
+uiAppName=$(jq -r '.uiAppName' userInputs.json)
 echo Please enter the system username;
 read  username
 echo Please enter the system password;
@@ -12,7 +14,7 @@ cd src
 echo "Initiating git repository.."
 git init
 read
-echo "Heroku app webnodeapi will get deleted if already exists.Do you wish to continue (y/n)?"
+echo "Heroku app apiAppnName will get deleted if already exists.Do you wish to continue (y/n)?"
 read input
 echo $input
 if [ "$input" == "n" ];
@@ -20,9 +22,9 @@ then
  exit 1
 fi
 echo Deleting the app if already exists
-heroku apps:destroy --app webnodeapi  --confirm webnodeapi
+heroku apps:destroy --app $apiAppnName  --confirm $apiAppnName
 echo "Starting the app creation.."
-heroku create webnodeapi
+heroku create $apiAppnName
 git remote -v
 git status
 git add .
@@ -34,20 +36,20 @@ git push heroku master
 cd ..
 echo "Initiating git repository.."
 git init
-echo "Heroku app acceptsuitenodejsui will get deleted if already exists.Do you wish to continue(y/n)?"
+echo "Heroku app uiAppName will get deleted if already exists.Do you wish to continue(y/n)?"
 read input
 if [ "$input" == "n" ];
 then
  exit 1
 fi
-heroku apps:destroy --app acceptsuitenodejsui  --confirm acceptsuitenodejsui
+heroku apps:destroy --app $uiAppName  --confirm $uiAppName
 echo "Starting the app creation.."
-heroku create acceptsuitenodejsui
+heroku create $uiAppName
 git remote -v
 git status
 git add .
 git commit -am "push acceptsuitecodeui"
 git push heroku master
 echo Launching the app..
-start https://acceptsuitenodejsui.herokuapp.com/index_all.html
+start https://$uiAppName.herokuapp.com/index_all.html
 exit 0
