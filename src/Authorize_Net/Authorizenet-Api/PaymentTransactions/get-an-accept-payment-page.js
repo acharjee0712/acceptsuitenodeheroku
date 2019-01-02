@@ -43,8 +43,8 @@ function getAnAcceptPaymentPage(apiloginid, transactionkey, customerProfileId = 
 	var setting5 = new ApiContracts.SettingType(); //added for return url
 	setting5.setSettingName('hostedPaymentReturnOptions');
 	var val = '{\"showReceipt\": false,\"url\":\"';
-	var val2 = val += hostedPaymentIFrameCommunicatorUrl + '\",\"urlText\":\"Continue\",\"cancelUrl\":\"';
-	val2 += hostedPaymentIFrameCommunicatorUrl + '\",\"cancelUrlText\":\"Cancel\"}';
+	var val2 = val += hostedPaymentIFrameCommunicatorUrl + '\",\"urlText\":\"Continue\",';
+	val2 += '\"cancelUrlText\":\"Cancel\"}';
 	setting5.setSettingValue(val2)
 	console.log(val2)
 

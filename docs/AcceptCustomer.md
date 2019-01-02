@@ -13,11 +13,11 @@ There are two ways to navigate to Accept.js page.
  
 The URL format for Accept Customer is as follows,
 
-https://acceptsuitenodejsui.herokuapp.com/index.html?producttype=acceptcustomer&CustomerId=1813212446
+https://localhost:PortNumber/index.html?ProductType=AcceptCustomer&CustomerId=1813212446
 
 ## Workflow
 
-**Accept Hosted client-side functionality is written in *accept-customer.js* javascript file (C:\GitHub\accept-sample-app-dotnet-master\scripts\js\accept-suite\accept-customer.js).**
+**Accept Hosted client-side functionality is written in *accept-customer.js* javascript file (C:\GitHub\accept-sample-app-dotnet-master\assets\js\accept-suite\accept-customer.js).**
 
 Accept Customer will utilize existing ANET Customer Profiles API methods. Customer ID is mandatory to access Accept Customer product type. 
 

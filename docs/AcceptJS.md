@@ -6,7 +6,7 @@ Accept.js is a JavaScript-based solution for sending secure payment data directl
 
 * In Order to utilize the functionality, please provide the below plugin in the HTML file.
 
-SANDBOX: https://jstest.authorize.net/v1/Accept.js  
+  SANDBOX: https://jstest.authorize.net/v1/Accept.js  
 
 * The functionality for Accept.js is written in pure JavaScript and pages are designed using Bootstrap classes.
 
@@ -19,7 +19,7 @@ There are two ways to navigate to Accept.js page.
  
 The URL format for Accept.js is as follows,
 
-https://acceptsuitenodejsui.herokuapp.com/index.html?producttype=acceptjs
+https://localhost:PortNumber/index.html?ProductType=Acceptjs
 
 ## Workflow
 
@@ -67,7 +67,7 @@ On click of Done button, the page will be redirected to dashboard page.
 
 ### Understanding Accept.js Functionality
 
-**Accept.js client-side functionality is written in *accept.js* javascript file (C:\GitHub\accept-sample-app-dotnet-master\scripts\js\accept-suite\accept.js).**
+**Accept.js client-side functionality is written in *accept.js* javascript file (C:\GitHub\accept-sample-app-dotnet-master\assets\js\accept-suite\accept.js).**
 
 As soon as the user gets redirected to the Accept.js page from the dashboard page, **showData** function gets executed.
 

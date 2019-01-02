@@ -19,17 +19,17 @@ There are two ways to navigate to Accept Hosted page.
  
 The URL format for Accept Hosted is as follows,
 
-https://acceptsuitenodejsui.herokuapp.com/index.html?producttype=accepthosted
+https://localhost:PortNumber/index.html?ProductType=AcceptHosted
 
 The sample URL format for Accept Hosted without Customer ID is as follows,
-https://acceptsuitenodejsui.herokuapp.com/index.html?producttype=accepthosted
+https://localhost:5008/index.html?producttype=AcceptHosted
 
 The sample URL format for Accept Hosted with passing customer ID is as follows,
-https://acceptsuitenodejsui.herokuapp.com/index.html?producttype=accepthosted&CustomerId=1813212446
+https://localhost:5008/index.html?ProductType=AcceptHosted&CustomerId=1813212446
 
 ## Workflow
 
-**Accept Hosted client-side functionality is written in *accept-hosted.js* javascript file (C:\GitHub\accept-sample-app-dotnet-master\scripts\js\accept-suite\accept-hosted.js).**
+**Accept Hosted client-side functionality is written in *accept-hosted.js* javascript file (C:\GitHub\accept-sample-app-dotnet-master\assets\js\accept-suite\accept-hosted.js).**
 
 Step 1 : On loading of Accept Hosted page, there are two cases to be checked.
 
@@ -183,7 +183,7 @@ To securely communicate between our Accept Hosted form and your web page, we nee
 
 The URL of the communicator page is passed in your token request, which will allow Authorize.Net to embed the communicator page in the payment form.
 
-A communication handler is written to receive the messages of iframe communicator and executes the script based on the message received.
+A communication handler is written in **app.js** file (C:\GitHub\accept-sample-app-dotnet-master\assets\js\accept-suite\app.js) to receive the messages of iframe communicator and executes the script based on the message received.
 
 ```
 //Methods for accept hosted/accept customer iframes that executes on receiving message in iframeCommunicator

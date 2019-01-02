@@ -6,7 +6,7 @@ In this we embed the built-in ANET hosted form in our application to capture and
 
 * In Order to utilize the functionality, please provide the below plugin in the HTML file.
 
-SANDBOX: https://jstest.authorize.net/v3/AcceptUI.js    
+  SANDBOX: https://jstest.authorize.net/v3/AcceptUI.js    
  
 * The functionality for Accept.js with UI is written in pure JavaScript and pages are designed using Bootstrap classes.
 
@@ -19,7 +19,7 @@ There are two ways to navigate to Accept.js UI page.
  
 The URL format for Accept.js UI is as follows,
 
-https://acceptsuitenodejsui.herokuapp.com/index.html?producttype=acceptui
+https://localhost:PortNumber/index.html?ProductType=Acceptui
 
 ## Workflow
 
@@ -55,7 +55,7 @@ Then the request is sent to the web service and based on the response code of th
 
 ### Understanding Accept.js UI Functionality
 
-**Accept.js UI client-side functionality is written in *accept.js* javascript file (C:\GitHub\accept-sample-app-dotnet-master\scripts\js\accept-suite\accept.js).**
+**Accept.js UI client-side functionality is written in *accept.js* javascript file (C:\GitHub\accept-sample-app-dotnet-master\assets\js\accept-suite\accept.js).**
 
 When the user redirects from dashboard page to the Accept.js UI page, **acceptUI** function gets executed.
 

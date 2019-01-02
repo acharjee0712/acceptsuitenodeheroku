@@ -13,6 +13,7 @@ function loadJSON() {
         success: function (jsondata) {
             globalVars = {
 // Default sandbox credentials
+
     ClientKey: '6C47PepC2NyJ2dgTy89U56xnan24H3cb363wxvBC5DP9Cjk5Fwp6b4q2YBnjU2Xp',
 
     ApiLoginID: '78BZ5Xprry',
@@ -31,6 +32,7 @@ function loadJSON() {
     ValidateCustomerRequestUrl:'https://' + jsondata.apiAppnName + '.herokuapp.com/acceptsuite/validateCustomer',
 	// available customer id
     ValidCustomer: '1916219194'
+	
 
     };
         }
