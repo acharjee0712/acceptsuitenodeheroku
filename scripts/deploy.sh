@@ -9,13 +9,13 @@ then
 fi
  
 # Reading variable values from userInputs.json file
-apiAppnName=$(jq -r '.apiAppnName' $file)
+apiAppName=$(jq -r '.apiAppnName' $file)
 uiAppName=$(jq -r '.uiAppName' $file)
 
 # Checking for null values for variables 
-if  [  "$apiAppnName" == null ] || [ -z "$apiAppnName" ] || [  "$uiAppName" == null ] || [ -z "$uiAppName" ]
+if  [  "$apiAppName" == null ] || [ -z "$apiAppName" ] || [  "$uiAppName" == null ] || [ -z "$uiAppName" ]
 then 
-  echo "variable apiAppnName or uiAppName  is null,please give proper variable values in userInputs.json  "
+  echo "variable apiAppName or uiAppName  is null,please give proper variable values in userInputs.json  "
   sleep $n
 	exit 1
 fi
@@ -27,6 +27,8 @@ echo Please enter the system password;
 read -s password
 export HTTP_PROXY=http://$username:$password@internet.visa.com:80
 export HTTPS_PROXY=http://$username:$password@internet.visa.com:443
+
+#Log in to heoku application
 echo "PLEASE TERMINATE JOB(CTRL+C with Y as INPUT) AFTER HEROKU LOGIN TO CONTINUE WITH DEPLOYMENT"
 heroku login --interactive
 
@@ -36,6 +38,8 @@ cd src
 echo "Initiating git repository.."
 git init
 read
+
+#user confirmation to delte the heroku app if already exists in his account
 echo "Heroku app apiAppnName will get deleted if already exists.Do you wish to continue (y/n)?"
 read input
 echo $input
@@ -50,15 +54,21 @@ heroku create $apiAppnName
 git remote -v
 git status
 git add .
+
+#commiting the changes to heroku git
 git commit -am "push acceptsuitecode"
 export HTTP_PROXY=http://$username:$password@internet.visa.com:80
 export HTTPS_PROXY=http://$username:$password@internet.visa.com:443
+
+#deploying the code
 git push heroku master
 
 #Start deploying the Acceptsuite UI
 cd ..
 echo "Initiating git repository.."
 git init
+
+#user confirmation to delte the heroku app if already exists in his account
 echo "Heroku app uiAppName will get deleted if already exists.Do you wish to continue(y/n)?"
 read input
 if [ "$input" == "n" ];
@@ -71,7 +81,11 @@ heroku create $uiAppName
 git remote -v
 git status
 git add .
+
+#commiting the changes to heroku git
 git commit -am "push acceptsuitecodeui"
+
+#deploying the code
 git push heroku master
 echo Launching the app..
 

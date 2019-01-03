@@ -67,8 +67,9 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 
 * **APPLICATIONNAME** parameter is dynamic and it took value by using "jsondata.apiAppnName" from userInputs.json file (scripts/userInputs.json).
 
-* userInputs.json file has the default values for application name as well as for hosting the application in web page.</br>
-  change the variable values  in order to deploy web application as well as hosting the ui in browser & the values should not be null or blank string.
+* Provide the web api and UI application name for heroku deployment in ./scripts/userinputs.json file. (Values should not be empty or null)
+    apiAppName - Web Api deployment heroku application name.
+    uiAppName - Accept suite UI deployment heroku application name.
 ```
 {
     "apiAppnName" : "myappwebapi",
