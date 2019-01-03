@@ -67,8 +67,14 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 
 * **APPLICATIONNAME** parameter is dynamic and it took value by using "jsondata.apiAppnName" from userInputs.json file (scripts/userInputs.json).
 
-* userInputs.json file has the default values for application name as well as for hosting the application in web page.
-
+* userInputs.json file has the default values for application name as well as for hosting the application in web page.</br>
+  change the variable values  in order to deploy web application as well as hosting the ui in browser & the values should not be null or blank string.
+```
+{
+    "apiAppnName" : "myappwebapi",
+    "uiAppName" : "myappnodeapiui"
+}
+```
  Below are the sample URLs of web api methods
  * AcceptJSRequestUrl/AcceptUI.JS RequestUrl : URL to invoke Accept JS web service. 
 
@@ -145,6 +151,7 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 *	[Prerequisite](../master/README.md#prerequisite)
 
 # Steps to follow while running the  shell script
+* open the userInputs.json file in order to change the variable name(../master/README.md#API URL's Section)
 * Double click the shell script file **deploy.sh** at .\accept-sample-app-node\scripts folder.
 
 ![Image of deployment file](docs/images/deploy.JPG)
