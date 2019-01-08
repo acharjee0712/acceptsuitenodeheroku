@@ -7,7 +7,7 @@ Developer Guide to deploy the Node.js using Express.js Web API Application
 * Heroku account (New account can be created using the link https://signup.heroku.com/)
 * Downlaod and install Heroku CLI using the link https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
-##Switching between the sandbox environment and the production environment
+## Switching between the sandbox environment and the production environment
 
 Authorize.Net maintains a complete sandbox environment for testing and development purposes. This sandbox environment is an exact duplicate of our production environment with the transaction authorization and settlement process simulated. By default, this SDK is configured to communicate with the sandbox environment. To switch to the production environment, call setEnvironment on the controller variable before execute. For example:
 
