@@ -2,7 +2,7 @@
 
 # Deploy Accept Suite Node.js Application
 
-## Very detailed explanation of each product type.
+## Detailed explanation of each product type.
 Authorized.Net Accept suite has below products.
 *	Accept JS
 *	Accept UI
@@ -26,7 +26,7 @@ Readme files  of each product are available in the below link.</br>
 
 ## Steps to download the code from the repository:
 
-* Click on Clone or Download button from the repository.
+* Click on <b>Clone or Download</b> button from the repository.
 
 * Popup Displays 2 Options Open in Desktop or Download ZIP
 
@@ -44,10 +44,10 @@ Readme files  of each product are available in the below link.</br>
 ## Step by Step Guide for Manual Deployment
 
 ## Prerequisite:
-*	Node.js 4.1.2 or higher Download Link: https://nodejs.org/en/download/
+*	Node.js 4.1.2 or higher - Download Link: https://nodejs.org/en/download/
 *   Sublime Text/Visual studio code 2017 or any HTML editor.
 *	Heroku account (New account can be created using the link https://signup.heroku.com/)
-*   Downlaod and install Heroku CLI using the link https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+*   Download and install Heroku CLI using the link https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 *   Download the jq  library file  & rename the file as jq.exe and placed it in your system 
  
 *   [Download the code to the local folder](../master/README.md#steps-to-download-the-code-from-the-repository)
@@ -65,7 +65,7 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 
 * **ApiMethodName** parameter is dynamic and that need to be replaced with Product Type name.  
 
-* **APPLICATIONNAME** parameter is dynamic and it took value by using "jsondata.apiAppnName" from userInputs.json file (scripts/userInputs.json).
+* **APPLICATIONNAME** parameter is dynamic and it takes value by using "jsondata.apiAppnName" from userInputs.json file (scripts/userInputs.json).
 
 * Provide the web api and UI application name for heroku deployment in ./scripts/userinputs.json file. (Values should not be empty or null)
     apiAppName - Web Api deployment heroku application name.
@@ -164,13 +164,15 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
 ## Trouble Shoot
 
-• While deploying the app, if encounter with  could not resolve host/could not read from remote repository issue  , please follow the steps describe below <br/>
+• While deploying the app, if you encounter- <b>could not resolve host/could not read from remote repository issue</b>, </br>
+ please follow the steps describe below.<br/>
 
 ![Images of  could not resolve host](docs/images/deploy_issue.JPG)
 
 • Download the certificate file i.e:- cacert.pem file.
 
-• copy the path of cacert.pem file , & paste it as variable values with variable name as SSL_CERT-FILE in your system environment variables
+• copy the path of cacert.pem file & paste it as variable values with variable name as SSL_CERT-FILE in your system environment variables
+
 
 
 
