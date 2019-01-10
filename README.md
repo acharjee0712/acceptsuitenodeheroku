@@ -54,6 +54,8 @@ Readme files  of each product are available in the below link.</br>
 
 * Open the folder **src**
 
+* open command prompt in administrator mode & run the command <b>"npm install"</b></br>
+
 * [ Details steps for Web Api Deployment ](../master/src/README.md#Steps-to-deploy-the-web-API-in-Heroku)
 
 ## API URL's Section
