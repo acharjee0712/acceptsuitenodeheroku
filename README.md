@@ -1,8 +1,6 @@
 # Accept Suite Integration with Node.js WEB API
 
-## Deploy Accept Suite Node.js Application
-
-### Detailed explanation of each product type.
+## Detailed Explanation Of Each Product Type
 
 Authorized.Net Accept suite has below products. Detailed explanation of each product are available in the below links.
 *	[Accept JS](https://developer.authorize.net/api/reference/features/acceptjs.html)
@@ -10,12 +8,12 @@ Authorized.Net Accept suite has below products. Detailed explanation of each pro
 *	[Accept Hosted](https://developer.authorize.net/api/reference/features/accept_hosted.html)
 *	[Accept Customer](https://developer.authorize.net/api/reference/features/customer_profiles.html)
 
-## Two ways to deploy Accept Suite Node.js Application
+## Two Ways To Deploy Accept Suite Node.js Application
 
 ### [Manual Deployment](../master/README.md#Manual-Deployment)
 ### [Automatic Deployment](../master/README.md#Automatic-Deployment)
 
-## Steps to download the code from the repository:
+## Steps To Download The Code From The Repository:
 
 * Click on <b>Clone or Download</b> button from the repository.
 
@@ -59,6 +57,8 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 * **ApiMethodName** parameter is dynamic and that need to be replaced with Product Type name.  
 
 * **APPLICATIONNAME** parameter is dynamic and it takes value by using "jsondata.apiAppnName" from userInputs.json file (scripts/userInputs.json).
+
+#### userinputs.json
 
 * Provide the web api and UI application name for heroku deployment in ./scripts/userinputs.json file. (Values should not be empty or null)
     apiAppName - Web Api deployment heroku application name.
@@ -145,12 +145,16 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 *	[Prerequisite](../master/README.md#prerequisite)
 
 ### Steps to follow while running the  shell script
-* open the userInputs.json file in order to change the variable name(../master/README.md#API URL's Section)
+* open the userInputs.json file in order to change the variable name(../master/README.md#API-URL's-Section)
+
 * Double click the shell script file **deploy.sh** at .\accept-sample-app-node\scripts folder.
+
+* Double click the Bat file **deploy.bat** at .\accept-sample-app-node\scripts folder for windows operating system.
+
 
 ![Image of deployment file](docs/images/deploy.JPG)
 
-*   Application will be launched automatically on successful deployment and the URL will be 
+*   Application will be launched automatically on successful deployment and the URL will be</br>
   URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html in Chrome Browser.
 
 ![Image of dashboard](docs/images/dashboard.JPG)
