@@ -3,23 +3,14 @@
 ## Deploy Accept Suite Node.js Application
 
 ### Detailed explanation of each product type.
+
 Authorized.Net Accept suite has below products. Detailed explanation of each product are available in the below links.
 *	[Accept JS](https://developer.authorize.net/api/reference/features/acceptjs.html)
 *	[Accept UI](https://developer.authorize.net/api/reference/features/accept.html)
 *	[Accept Hosted](https://developer.authorize.net/api/reference/features/accept_hosted.html)
 *	[Accept Customer](https://developer.authorize.net/api/reference/features/customer_profiles.html)
 
-Detailed explanation of each product are available in the below links.
-https://developer.authorize.net/api/reference/features/accept.html
-https://developer.authorize.net/api/reference/features/acceptjs.html
-https://developer.authorize.net/api/reference/features/accept_hosted.html
-https://developer.authorize.net/api/reference/features/customer_profiles.html#Using_the_Accept_Customer_Hosted_Form
-
-Readme files  of each product are available in the below link.</br>
- acceptsuitenodeheroku\documents
-
 ## Two ways to deploy Accept Suite Node.js Application
-
 
 ### [Manual Deployment](../master/README.md#Manual-Deployment)
 ### [Automatic Deployment](../master/README.md#Automatic-Deployment)
