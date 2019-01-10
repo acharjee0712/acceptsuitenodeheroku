@@ -153,7 +153,7 @@ Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
 *	[Prerequisite](../master/README.md#prerequisite)
 
-# Steps to follow while running the  shell script
+### Steps to follow while running the  shell script
 * open the userInputs.json file in order to change the variable name(../master/README.md#API URL's Section)
 * Double click the shell script file **deploy.sh** at .\accept-sample-app-node\scripts folder.
 
