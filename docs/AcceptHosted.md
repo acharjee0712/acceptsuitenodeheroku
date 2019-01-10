@@ -1,4 +1,4 @@
-# Accept Hosted Step by Step
+# Accept Hosted 
 
 ## Description
 
