@@ -3,11 +3,11 @@
 ## Deploy Accept Suite Node.js Application
 
 ### Detailed explanation of each product type.
-Authorized.Net Accept suite has below products.
-*	Accept JS
-*	Accept UI
-*	Accept Hosted
-*	Accept Customer
+Authorized.Net Accept suite has below products. Detailed explanation of each product are available in the below links.
+*	[Accept JS] (https://developer.authorize.net/api/reference/features/acceptjs.html)
+*	[Accept UI] (https://developer.authorize.net/api/reference/features/accept.html)
+*	[Accept Hosted](https://developer.authorize.net/api/reference/features/accept_hosted.html)
+*	[Accept Customer] (https://developer.authorize.net/api/reference/features/customer_profiles.html)
 
 Detailed explanation of each product are available in the below links.
 https://developer.authorize.net/api/reference/features/accept.html
@@ -141,7 +141,7 @@ The following are the parameters with values that remains constant throughout th
 
 * Finally, run the command “git push heroku master” which will do the deployment. Deployed URL will be displayed on successful deployment.
 
-### browse the website
+### Browse The Website
 
 Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
