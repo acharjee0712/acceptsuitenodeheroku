@@ -1,4 +1,6 @@
-# Accept.js Description
+# Accept.js 
+
+##Description
 
 Accept.js is a JavaScript-based solution for sending secure payment data directly to Authorize.Net. The Accept JavaScript library intercepts the payment data before it is passed to merchant server and instead submits it directly to Authorize.Net.
 

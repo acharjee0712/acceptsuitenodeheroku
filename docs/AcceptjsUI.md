@@ -1,4 +1,6 @@
-# Accept.js with UI Description
+# Accept.js with UI 
+
+##Description
 
 In this we embed the built-in ANET hosted form in our application to capture and send sensitive payment information directly to Authorize.Net.
 
