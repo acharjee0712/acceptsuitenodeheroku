@@ -1,8 +1,8 @@
 # Accept Suite Integration with Node.js WEB API
 
-# Deploy Accept Suite Node.js Application
+## Deploy Accept Suite Node.js Application
 
-## Detailed explanation of each product type.
+### Detailed explanation of each product type.
 Authorized.Net Accept suite has below products.
 *	Accept JS
 *	Accept UI
@@ -21,8 +21,8 @@ Readme files  of each product are available in the below link.</br>
 ## Two ways to deploy Accept Suite Node.js Application
 
 
-## [Manual Deployment](../master/README.md#Step-by-Step-Guide-for-Manual-Deployment)
-## [Automatic Deployment](../master/README.md#Step-by-Step-Guide-for-Automatic-Deployment)
+### [Manual Deployment](../master/README.md#Manual-Deployment)
+### [Automatic Deployment](../master/README.md#Automatic-Deployment)
 
 ## Steps to download the code from the repository:
 
@@ -41,9 +41,9 @@ Readme files  of each product are available in the below link.</br>
 
 ![Image of FolderStructure](docs/images/FolderStructure.JPG)
 
-## Step by Step Guide for Manual Deployment
+## Manual Deployment
 
-## Prerequisite:
+### Prerequisite:
 *	Node.js 4.1.2 or higher - Download Link: https://nodejs.org/en/download/
 *   Sublime Text/Visual studio code 2017 or any HTML editor.
 *	Heroku account (New account can be created using the link https://signup.heroku.com/)
@@ -58,7 +58,7 @@ Readme files  of each product are available in the below link.</br>
 
 * [ Details steps for Web Api Deployment ](../master/src/README.md#Steps-to-deploy-the-web-API-in-Heroku)
 
-## API URL's Section
+### API URL's Section
 
 The WEB API URLs should be provided in constant.js file in the following format.
 
@@ -98,7 +98,7 @@ https://APPLICATIONNAME.herokuapp.com/acceptsuite/ApiMethodName
 
 	**Sample URL: 'https://' + jsondata.apiAppnName + '.herokuapp.com/acceptsuite/validateCustomer'**
 	
-## Merchant Authentication Details:
+### Merchant Authentication Details:
 
 The following are the parameters with values that remains constant throughout the application. These parameters are used in script through Ajax calls for performing payments.
 
@@ -116,7 +116,7 @@ The following are the parameters with values that remains constant throughout th
 
 ![Image of ApiTransactionKey](docs/images/apiTransactionKey.PNG)
 
-## Create Website on Heroku
+### Create Website on Heroku
 
 *	Open the command prompt in administrator mode.
 
@@ -141,13 +141,13 @@ The following are the parameters with values that remains constant throughout th
 
 * Finally, run the command “git push heroku master” which will do the deployment. Deployed URL will be displayed on successful deployment.
 
-## browse the website
+### browse the website
 
 Sample URL: https://acceptsuitenodejsui.herokuapp.com/index_all.html
 
 ![Image of dashboard](docs/images/dashboard.JPG)
 
-## Step by Step Guide for Automatic Deployment
+## Automatic Deployment
 
 *   [Download the code to the local folder](../master/README.md#steps-to-download-the-code-from-the-repository)
 
