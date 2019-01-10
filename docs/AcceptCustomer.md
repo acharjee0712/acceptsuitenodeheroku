@@ -1,4 +1,6 @@
-# Accept Customer Description
+# Accept Customer
+
+## Description
 
 Accept Customer is a fully hosted payment information that allows the creation of customer profile, payment profile and shipping profile with hosted functionality. 
 
@@ -6,7 +8,7 @@ The functionality for Accept Customer is written in pure JavaScript and pages ar
 
 ## Accessing Accept Customer Page
 
-There are two ways to navigate to Accept.js page.
+There are two ways to navigate to Accept Customer page.
 
 * The Accept Customer page can be accessed from the dashboard page by clicking on the Accept Customer tab. 
 * Access directly by providing the product type and customer ID query strings in the URL.
