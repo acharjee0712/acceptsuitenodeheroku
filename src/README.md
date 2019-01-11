@@ -1,7 +1,7 @@
 # Accept Suite
 Developer Guide to deploy the Node.js using Express.js Web API Application 
 
-## Prerequisite:
+## Prerequisites:
 * Sublime Text or  visual studio code 2017 or any editor of your choice.
 * Node.js version 4.8.4 or higher . Download Link: https://nodejs.org/en/download/
 * Heroku account (New account can be created using the link https://signup.heroku.com/)

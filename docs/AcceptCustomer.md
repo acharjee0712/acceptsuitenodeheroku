@@ -28,7 +28,7 @@ A default customer ID is already populated in the input field.
 
 ![Image of CustomerPopUp](images/CustomerPopUp.PNG)
 
-There is an information icon beside the input field, on click of it the scenarios on how Customer profile ID can be found (existing) or created are shown to the user.
+There is an information icon beside the input field. Clicking it provides details on how Customer profile ID can be found (existing) or created.
 
 ![Image of Scenarios](images/Scenarios.PNG)
 
@@ -114,9 +114,9 @@ function validateCustomer(id) {
 If it is a valid customer ID then the **acceptCustomer** method is called. 
 If the customer ID is not valid we will display the error message recieved from the API call on the screen.
 
-![Image of InvalidCustomer](images/InvalidCustomer.PNG)
 
-On click of Back to Home Page button, the page will be redirected to dashboard page.
+
+Clicking the Back to Home Page button will redirect the user back to the dashboard page.
 
 The other scenario is also checked on loading the accept customer page, where the user by directly provides the customer ID as a query string in URL without populating it in the pop up and then loads the URL, the code first validates the customer ID parameter in the URL. 
 If it is valid then only **acceptCustomer** function is invoked.
